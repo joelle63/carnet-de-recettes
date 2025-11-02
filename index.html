@@ -44,20 +44,38 @@
     }
 
     /* Lien vers la table des matières */
-    .entree-goutee {
-      display: block;
-      text-align: center;
+    .entrez-goutez {
+      display: inline-block;
+      align-self: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000; /* couleur marron */
       font-size: 24px;
-      margin-top: 20px;
+      margin-top: 25px;
       text-decoration: none;
+      position: relative;
+      cursor: pointer;
       transition: color 0.3s ease;
     }
 
-    .entree-goutee:hover {
-      color: #a63a00; /* nuance légèrement plus chaude au survol */
+    /* Soulignement discret au survol */
+    .entrez-goutez::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: #800000;
+      transition: width 0.3s ease;
+    }
+
+    .entrez-goutez:hover {
+      color: #a63a00;
+    }
+
+    .entrez-goutez:hover::after {
+      width: 100%;
     }
 
     /* Pied de page */
@@ -83,7 +101,7 @@
   <h1>Ma cuisine<br>du quotidien</h1>
 
   <!-- Lien cliquable vers la table des matières -->
-  <a href="table-des-matieres.html" class="entrez-goutez">Entrez et goûtez ==></a>
+  <a href="table-des-matieres.html" class="entrez-goutez">Entrez et goûtez</a>
 
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
