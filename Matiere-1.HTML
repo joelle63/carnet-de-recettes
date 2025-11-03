@@ -1,96 +1,99 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Table des matières – Ma cuisine du quotidien</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background-color: #F2E8D6; /* beige doux */
+      height: 100%;
+      width: 100%;
+      background-color: #FFF8DC;
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      position: relative;
+      justify-content: space-between;
+      align-items: center;
       color: #582900;
+      overflow: hidden;
     }
 
-```
-h1 {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 80px;
-  color: #800000;
-  text-align: center;
-  line-height: 1.1;
-  margin-top: 100px;
-  margin-bottom: 0;
-}
+    /* --- TITRE --- */
+    .titre-principal {
+      text-align: center;
+      margin-top: 30px;
+    }
 
-h2 {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 72px;
-  color: #800000;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 80px;
-}
+    .titre-principal h1 {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 70px;
+      color: #800000;
+      margin: 0;
+    }
 
-.categories {
-  width: 70%;
-  margin: 0 auto 100px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
+    /* --- LISTE --- */
+    .categories {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
 
-.categorie {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
+    .categorie {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 500px; /* largeur fixe pour alignement parfait */
+    }
 
-.categorie img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-}
+    .categorie img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
 
-.categorie a {
-  font-size: 40px;
-  font-weight: 600;
-  color: #582900;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    .categorie a {
+      font-size: 24px;
+      font-weight: 600;
+      color: #582900;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      text-align: left; /* aligne le texte à gauche dans le bloc */
+      flex-grow: 1;
+    }
 
-.categorie a:hover {
-  color: #A63A00;
-  text-decoration: underline;
-}
+    .categorie a:hover {
+      color: #A63A00;
+      text-decoration: underline;
+    }
 
-footer {
-  text-align: center;
-  font-weight: bold;
-  color: #800000;
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-```
-
+    /* --- PIED DE PAGE --- */
+    footer {
+      text-align: center;
+      font-weight: bold;
+      color: #800000;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
-<body>
 
-  <h1>Ce que j’ai testé</h1>
-  <h2>et aimé</h2>
+<body>
+  <div class="titre-principal">
+    <h1>Ce que j’ai testé et aimé</h1>
+  </div>
 
   <div class="categories">
     <div class="categorie">
       <img src="emoji_soupe.png" alt="Icône soupe">
-      <a href="soupes.html">Soupes & veloutés</a>
+      <a href="Soupes.html">Soupes & veloutés</a>
     </div>
     <div class="categorie">
       <img src="2-Entree.png" alt="Icône quiches et cakes">
@@ -123,6 +126,5 @@ footer {
   </div>
 
   <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
-
 </body>
 </html>
