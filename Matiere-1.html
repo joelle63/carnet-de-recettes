@@ -2,130 +2,150 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Table des matières – Ma cuisine du quotidien</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table des matières</title>
 
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      width: 100%;
       background-color: #FFF8DC;
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
-      color: #582900;
-      overflow: hidden;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
     }
 
-    /* --- TITRE --- */
-    .titre-principal {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .titre-principal h1 {
+    /* --- VERSION PC (inchangée) --- */
+    h1 {
       font-family: 'Pinyon Script', cursive;
-      font-size: 70px;
+      font-size: 72px;
       color: #800000;
-      margin: 0;
+      text-align: center;
+      margin-top: 70px;
+      line-height: 1.1;
+      margin-bottom: 25px;
     }
 
-    /* --- LISTE --- */
-    .categories {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
     }
 
-    .categorie {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      width: 500px; /* largeur fixe pour alignement parfait */
-    }
-
-    .categorie img {
-      width: 55px;
-      height: 55px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .categorie a {
+    li {
+      font-family: 'Montserrat', sans-serif;
       font-size: 24px;
-      font-weight: 600;
+      color: #582900;
+      margin: 10px 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+
+    li img {
+      width: 45px;
+      margin-right: 12px;
+    }
+
+    a {
       color: #582900;
       text-decoration: none;
       transition: color 0.3s ease;
-      text-align: left; /* aligne le texte à gauche dans le bloc */
-      flex-grow: 1;
     }
 
-    .categorie a:hover {
+    a:hover {
       color: #A63A00;
-      text-decoration: underline;
     }
 
-    /* --- PIED DE PAGE --- */
     footer {
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000;
-      font-size: 18px;
-      margin-bottom: 20px;
+      font-size: 20px;
+      margin-top: auto;
+      padding-bottom: 25px;
+    }
+
+    /* -------------------- RESPONSIVE corrigé -------------------- */
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 68px;       /* plus grand */
+        margin-top: 140px;     /* descendu un peu */
+        margin-bottom: 30px;   /* espace resserré avant la liste */
+      }
+
+      ul {
+        margin-top: 30px;      /* liste plus proche du titre */
+      }
+
+      li {
+        font-size: 46px;       /* texte plus grand */
+        margin: 20px 0;        /* interligne ajusté */
+      }
+
+      li img {
+        width: 75px;
+        margin-right: 20px;
+      }
+
+      footer {
+        font-size: 18px;
+        margin-top: 80px;      /* footer bien visible */
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 52px;       /* un peu plus grand que ta version précédente */
+        margin-top: 120px;     /* redescend légèrement */
+        margin-bottom: 25px;
+      }
+
+      ul {
+        margin-top: 20px;
+      }
+
+      li {
+        font-size: 42px;
+        margin: 18px 0;
+      }
+
+      li img {
+        width: 65px;
+        margin-right: 15px;
+      }
+
+      footer {
+        margin-top: 70px;
+        font-size: 16px;
+      }
     }
   </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="titre-principal">
-    <h1>Ce que j’ai testé et aimé</h1>
-  </div>
+  <h1>Ce que j’ai testé et aimé</h1>
 
-  <div class="categories">
-    <div class="categorie">
-      <img src="2-soupe.png" alt="Icône soupe">
-      <a href="Soupes.html">Soupes & veloutés</a>
-    </div>
-    <div class="categorie">
-      <img src="2-Entree.png" alt="Icône quiches et cakes">
-      <a href="entrees.html">Entrées quiches & cakes</a>
-    </div>
-    <div class="categorie">
-      <img src="emoji_poisson.png" alt="Icône poisson">
-      <a href="poissons.html">Poissons & accompagnements</a>
-    </div>
-    <div class="categorie">
-      <img src="emoji_viande.png" alt="Icône viande">
-      <a href="viandes.html">Viandes & accompagnements</a>
-    </div>
-    <div class="categorie">
-      <img src="emoji_legumes.png" alt="Icône légumes">
-      <a href="legumes.html">Légumes ou préparations végétariennes</a>
-    </div>
-    <div class="categorie">
-      <img src="emoji_dessert.png" alt="Icône dessert">
-      <a href="desserts.html">Desserts</a>
-    </div>
-    <div class="categorie">
-      <img src="emoji_marinade.png" alt="Icône marinade">
-      <a href="marinades.html">Marinades</a>
-    </div>
-    <div class="categorie">
-      <img src="emoji_jus.png" alt="Icône jus">
-      <a href="jus.html">Jus de fruits</a>
-    </div>
-  </div>
+  <ul>
+    <li><img src="2-soupe.png" alt=""> <a href="Soupes.html" target="_blank">Soupes & veloutés</a></li>
+    <li><img src="2-Entree.png" alt=""> <a href="Entrees.html" target="_blank">Entrées quiches & cakes</a></li>
+    <li><img src="emoji_poisson.png" alt=""> <a href="Poissons.html" target="_blank">Poissons & accompagnements</a></li>
+    <li><img src="emoji_viande.png" alt=""> <a href="Viandes.html" target="_blank">Viandes & accompagnements</a></li>
+    <li><img src="emoji_legumes.png" alt=""> <a href="Legumes.html" target="_blank">Légumes ou préparations végétariennes</a></li>
+    <li><img src="emoji_dessert.png" alt=""> <a href="Desserts.html" target="_blank">Desserts</a></li>
+    <li><img src="emoji_marinade.png" alt=""> <a href="Marinades.html" target="_blank">Marinades</a></li>
+    <li><img src="emoji_jus.png" alt=""> <a href="Jus.html" target="_blank">Jus de fruits</a></li>
+  </ul>
 
-  <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
+  <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
+
+
 
