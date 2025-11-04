@@ -13,11 +13,11 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      background-color: #FFF8DC; /* ton fond sablé clair */
+      background-color: #FFF8DC; /* fond vanille papier */
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start; /* place tout en haut */
       align-items: center;
       color: #582900;
     }
@@ -33,17 +33,15 @@
       font-size: 70px;
       color: #800000;
       margin: 0;
-      letter-spacing: 1px;
     }
 
     /* --- LISTE DES RECETTES --- */
     .recettes {
-      flex: 1;
+      margin-top: 60px; /* espace entre le titre et la recette */
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-start; /* aligne les textes à gauche */
-      gap: 25px;
+      align-items: flex-start;
+      gap: 20px;
     }
 
     .recette {
@@ -78,6 +76,7 @@
       font-weight: bold;
       color: #800000;
       font-size: 18px;
+      margin-top: auto; /* pousse le pied vers le bas */
       margin-bottom: 20px;
     }
   </style>
@@ -90,7 +89,7 @@
 
   <div class="recettes">
     <div class="recette">
-      <img src="2-Potimarron.png" alt="Icône soupe">
+      <img src="emoji_soupe.png" alt="Icône soupe">
       <a href="0-Soupe-Potimarron.pdf" target="_blank">Soupe de potimarron au chorizo</a>
     </div>
   </div>
@@ -98,5 +97,3 @@
   <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
 </body>
 </html>
-
-
