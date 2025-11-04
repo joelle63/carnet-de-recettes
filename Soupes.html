@@ -14,13 +14,17 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      background-color: #FFF8DC; /* fond vanille papier */
+      background-color: #FFF8DC;
       font-family: 'Montserrat', sans-serif;
+      color: #582900;
+    }
+
+    /* --- CONTENEUR GLOBAL (évite bug du double footer) --- */
+    .page {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* place tout en haut */
       align-items: center;
-      color: #582900;
     }
 
     /* --- TITRE --- */
@@ -38,7 +42,7 @@
 
     /* --- LISTE DES RECETTES --- */
     .recettes {
-      margin-top: 60px; /* espace entre le titre et la recette */
+      margin-top: 60px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -77,24 +81,24 @@
       font-weight: bold;
       color: #800000;
       font-size: 18px;
-      margin-top: auto; /* pousse le pied vers le bas */
-      margin-bottom: 20px;
+      margin-top: auto;
+      padding-bottom: 30px; /* 🔽 descend sur PC */
     }
 
-    /* -------------------- RESPONSIVE POUR TÉLÉPHONES -------------------- */
+    /* -------------------- RESPONSIVE -------------------- */
     @media (max-width: 700px) {
       .titre-principal {
-        margin-top: 70px; /* 🔼 espace respirant en haut */
+        margin-top: 70px;
       }
 
       .titre-principal h1 {
-        font-size: 46px; /* 🔽 titre plus lisible sans casser la page */
+        font-size: 46px;
       }
 
       .recettes {
-        margin-top: 80px; /* 🔽 descend légèrement la liste sous le titre */
+        margin-top: 80px;
         gap: 25px;
-        align-items: center; /* 🔄 centré sur mobile */
+        align-items: center;
       }
 
       .recette {
@@ -109,8 +113,7 @@
 
       footer {
         font-size: 15px;
-        margin-top: 60px; /* 🔽 descend le pied pour aérer */
-        margin-bottom: 30px;
+        padding-bottom: 40px; /* 🔽 descend proprement sur téléphone */
       }
     }
 
@@ -140,30 +143,26 @@
 
       footer {
         font-size: 13px;
-        margin-top: 50px;
-        margin-bottom: 25px;
+        padding-bottom: 45px; /* 🔽 descend un peu plus bas sur mobile */
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="titre-principal">
-    <h1>Soupes et veloutés</h1>
-  </div>
-
-  <div class="recettes">
-    <div class="recette">
-      <img src="emoji_soupe.png" alt="Icône soupe">
-      <a href="0-Soupe-Potimarron.pdf" target="_blank">Soupe de potimarron au chorizo</a>
+  <div class="page">
+    <div class="titre-principal">
+      <h1>Soupes et veloutés</h1>
     </div>
+
+    <div class="recettes">
+      <div class="recette">
+        <img src="2-Potimarron.png" alt="Icône soupe">
+        <a href="0-Soupe-Potimarron.pdf" target="_blank">Soupe de potimarron au chorizo</a>
+      </div>
+    </div>
+
+    <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
   </div>
-
-  <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
 </body>
 </html>
-
-  <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
-</body>
-</html>
-
