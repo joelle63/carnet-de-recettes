@@ -19,21 +19,21 @@
       overflow-x: hidden;
     }
 
-    /* --- VERSION PC (inchangée) --- */
+    /* --- VERSION PC ajustée --- */
     h1 {
       font-family: 'Pinyon Script', cursive;
       font-size: 72px;
       color: #800000;
       text-align: center;
-      margin-top: 70px;
+      margin-top: 50px;       /* 🔼 remonté */
       line-height: 1.1;
-      margin-bottom: 25px;
+      margin-bottom: 40px;    /* 🔼 plus d’espace avec la liste */
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin-top: 15px;
+      margin-top: 25px;       /* 🔼 espacé du titre */
     }
 
     li {
@@ -71,25 +71,25 @@
       padding-bottom: 25px;
     }
 
-    /* -------------------- RESPONSIVE ajusté finement -------------------- */
+    /* -------------------- RESPONSIVE ajusté -------------------- */
     @media (max-width: 700px) {
       h1 {
-        font-size: 48px;       /* 🔽 taille plus fine */
-        margin-top: 70px;      /* 🔼 remonté */
-        margin-bottom: 10px;   /* 🔽 espacement réduit */
+        font-size: 48px;
+        margin-top: 70px;      /* ✅ on garde cette position */
+        margin-bottom: 25px;   /* 🔼 descend un peu l’arborescence */
       }
 
       ul {
-        margin-top: 5px;       /* 🔽 rapproché du titre */
+        margin-top: 40px;      /* 🔼 davantage d’espace sous le titre */
       }
 
       li {
-        font-size: 22px;       /* 🔽 réduit fortement */
-        margin: 6px 0;         /* 🔽 interligne plus serré */
+        font-size: 22px;
+        margin: 8px 0;
       }
 
       li img {
-        width: 38px;           /* 🔽 icône adaptée */
+        width: 38px;
         margin-right: 8px;
       }
 
@@ -101,22 +101,22 @@
 
     @media (max-width: 480px) {
       h1 {
-        font-size: 38px;       /* 🔽 proportion douce */
-        margin-top: 60px;      /* 🔼 bien remonté */
-        margin-bottom: 8px;
+        font-size: 38px;
+        margin-top: 60px;
+        margin-bottom: 25px;   /* 🔼 laisse respirer avant la liste */
       }
 
       ul {
-        margin-top: 5px;
+        margin-top: 40px;      /* 🔼 descend bien la liste */
       }
 
       li {
-        font-size: 20px;       /* 🔽 taille fine et fluide */
-        margin: 5px 0;
+        font-size: 20px;
+        margin: 6px 0;
       }
 
       li img {
-        width: 34px;           /* 🔽 plus compact */
+        width: 34px;
         margin-right: 6px;
       }
 
@@ -146,3 +146,4 @@
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
+
