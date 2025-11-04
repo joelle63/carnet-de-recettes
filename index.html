@@ -26,13 +26,13 @@
       width: 400px;
       opacity: 0.9;
       max-width: 40vw;
-      z-index: 0; /* passe sous le texte */
+      z-index: 0;
     }
 
     /* Image de la cocotte */
     .cocotte {
       position: absolute;
-      bottom: 60px;
+      bottom: 100px; /* 🔼 cocotte remontée */
       right: 50px;
       width: 350px;
       opacity: 0.9;
@@ -46,10 +46,10 @@
       font-size: 96px;
       color: #800000;
       text-align: center;
-      margin-top: 140px;
+      margin-top: 180px; /* 🔽 titre descendu légèrement */
       line-height: 1.1;
       position: relative;
-      z-index: 1; /* reste au-dessus du torchon */
+      z-index: 1;
     }
 
     /* Lien vers la table des matières */
@@ -96,7 +96,7 @@
       font-weight: bold;
       color: #800000;
       font-size: 20px;
-      padding-bottom: 40px;
+      padding-bottom: 20px; /* 🔼 pied-de-page remonté */
       position: relative;
       z-index: 1;
     }
@@ -105,7 +105,7 @@
     @media (max-width: 1000px) {
       h1 {
         font-size: 80px;
-        margin-top: 120px;
+        margin-top: 150px;
       }
       .torchon {
         width: 300px;
@@ -115,7 +115,7 @@
       }
       .cocotte {
         width: 280px;
-        bottom: 40px;
+        bottom: 80px; /* 🔼 reste bien visible */
         right: 30px;
       }
     }
@@ -123,7 +123,7 @@
     @media (max-width: 700px) {
       h1 {
         font-size: 60px;
-        margin-top: 100px;
+        margin-top: 130px;
       }
       .torchon {
         width: 220px;
@@ -133,7 +133,7 @@
       }
       .cocotte {
         width: 200px;
-        bottom: 30px;
+        bottom: 70px;
         right: 10px;
       }
       .entrez-goutez {
@@ -147,7 +147,7 @@
     @media (max-width: 480px) {
       h1 {
         font-size: 46px;
-        margin-top: 80px;
+        margin-top: 110px;
       }
       .torchon {
         width: 180px;
@@ -157,7 +157,7 @@
       }
       .cocotte {
         width: 160px;
-        bottom: 20px;
+        bottom: 60px;
         right: 5px;
       }
       .entrez-goutez {
@@ -180,3 +180,5 @@
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
+
+
