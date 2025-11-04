@@ -13,7 +13,6 @@
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* ✅ centre verticalement le bloc */
       align-items: center;
       min-height: 100vh;
       position: relative;
@@ -34,7 +33,7 @@
     /* Image de la cocotte */
     .cocotte {
       position: absolute;
-      bottom: 220px; /* ✅ remontée supplémentaire */
+      bottom: 220px;
       right: 60px;
       width: 350px;
       opacity: 0.9;
@@ -48,7 +47,7 @@
       font-size: 96px;
       color: #800000;
       text-align: center;
-      margin: 0 0 30px 0; /* suppression du grand margin-top */
+      margin: 120px 0 30px 0;
       line-height: 1.1;
       position: relative;
       z-index: 1;
@@ -96,7 +95,8 @@
       font-weight: bold;
       color: #800000;
       font-size: 20px;
-      margin-top: 60px; /* ✅ remonte le footer dans le flux */
+      margin-top: 60px;
+      margin-bottom: 20px;
       position: relative;
       z-index: 1;
     }
@@ -110,63 +110,68 @@
         width: 300px;
         top: 40px;
         left: 20px;
-        opacity: 0.85;
       }
       .cocotte {
         width: 280px;
         bottom: 180px;
         right: 30px;
       }
+    }
+
+    /* 📱 Tablettes et petits écrans */
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 60px;
+        margin-top: 90px; /* 🔼 titre un peu plus haut */
+      }
+      .torchon {
+        width: 220px;
+        top: 40px; /* 🔽 descend pour ne pas coller le bord */
+        left: 10px;
+        opacity: 0.8;
+      }
+      .entrez-goutez {
+        font-size: 20px;
+        margin-bottom: 60px;
+      }
+      .cocotte {
+        position: relative; /* ✅ passe dans le flux, sous le lien */
+        bottom: auto;
+        right: auto;
+        width: 200px;
+        margin-top: 40px;
+        opacity: 0.9;
+        z-index: 1;
+      }
       footer {
-        font-size: 18px;
+        position: relative;
+        bottom: 0;
+        font-size: 16px;
         margin-top: 50px;
       }
     }
 
-    @media (max-width: 700px) {
-      h1 {
-        font-size: 60px;
-      }
-      .torchon {
-        width: 220px;
-        top: 10px;
-        left: 10px;
-        opacity: 0.8;
-      }
-      .cocotte {
-        width: 200px;
-        bottom: 150px;
-        right: 10px;
-      }
-      .entrez-goutez {
-        font-size: 20px;
-      }
-      footer {
-        font-size: 16px;
-        margin-top: 40px;
-      }
-    }
-
+    /* 📱 Téléphones compacts */
     @media (max-width: 480px) {
       h1 {
         font-size: 46px;
+        margin-top: 70px; /* 🔼 encore un peu plus haut */
       }
       .torchon {
         width: 180px;
-        top: 0;
+        top: 30px; /* 🔽 un peu plus bas */
         left: 0;
         opacity: 0.75;
-      }
-      .cocotte {
-        width: 160px;
-        bottom: 120px;
-        right: 5px;
       }
       .entrez-goutez {
         font-size: 18px;
       }
+      .cocotte {
+        width: 160px;
+        margin-top: 40px;
+      }
       footer {
-        margin-top: 30px;
+        margin-top: 40px;
       }
     }
   </style>
@@ -174,17 +179,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Images décoratives -->
   <img src="torchon.png" alt="torchon décoratif" class="torchon">
-  <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
   <a href="Matiere-1.html" class="entrez-goutez" target="_blank">Entrez et goûtez</a>
 
+  <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
+
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
+
 
 
 
