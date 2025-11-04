@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ clé du responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ma cuisine du quotidien</title>
 
   <style>
@@ -15,7 +15,7 @@
       flex-direction: column;
       min-height: 100vh;
       position: relative;
-      overflow-x: hidden; /* ✅ évite les débordements horizontaux sur mobile */
+      overflow-x: hidden;
     }
 
     /* Image du torchon */
@@ -25,7 +25,8 @@
       left: 60px;
       width: 400px;
       opacity: 0.9;
-      max-width: 40vw; /* ✅ s’adapte sur petits écrans */
+      max-width: 40vw;
+      z-index: 0; /* passe sous le texte */
     }
 
     /* Image de la cocotte */
@@ -35,7 +36,8 @@
       right: 50px;
       width: 350px;
       opacity: 0.9;
-      max-width: 35vw; /* ✅ idem */
+      max-width: 35vw;
+      z-index: 0;
     }
 
     /* Titre principal */
@@ -44,26 +46,28 @@
       font-size: 96px;
       color: #800000;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 140px;
       line-height: 1.1;
+      position: relative;
+      z-index: 1; /* reste au-dessus du torchon */
     }
 
-    /* Lien vers la recette PDF */
+    /* Lien vers la table des matières */
     .entrez-goutez {
       display: inline-block;
       align-self: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
-      color: #3B3B3B; /* gris anthracite chaud */
+      color: #3B3B3B;
       font-size: 24px;
       margin-top: 25px;
       text-decoration: none;
       position: relative;
       cursor: pointer;
       transition: color 0.3s ease;
+      z-index: 1;
     }
 
-    /* Soulignement discret au survol */
     .entrez-goutez::after {
       content: "";
       position: absolute;
@@ -76,7 +80,7 @@
     }
 
     .entrez-goutez:hover {
-      color: #A63A00; /* rouge brique au survol */
+      color: #A63A00;
     }
 
     .entrez-goutez:hover::after {
@@ -93,55 +97,75 @@
       color: #800000;
       font-size: 20px;
       padding-bottom: 40px;
+      position: relative;
+      z-index: 1;
     }
 
     /* -------------------- RESPONSIVE -------------------- */
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       h1 {
-        font-size: 70px;
-        margin-top: 80px;
+        font-size: 80px;
+        margin-top: 120px;
       }
       .torchon {
-        width: 250px;
+        width: 300px;
+        top: 40px;
         left: 20px;
-        top: 50px;
+        opacity: 0.85;
       }
       .cocotte {
-        width: 220px;
-        right: 20px;
+        width: 280px;
         bottom: 40px;
-      }
-      .entrez-goutez {
-        font-size: 22px;
+        right: 30px;
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       h1 {
-        font-size: 54px;
-        margin-top: 60px;
+        font-size: 60px;
+        margin-top: 100px;
       }
       .torchon {
-        width: 180px;
+        width: 220px;
+        top: 10px;
         left: 10px;
-        top: 40px;
+        opacity: 0.8;
       }
       .cocotte {
-        width: 160px;
-        right: 10px;
+        width: 200px;
         bottom: 30px;
+        right: 10px;
       }
       .entrez-goutez {
         font-size: 20px;
-        margin-top: 20px;
       }
       footer {
         font-size: 16px;
       }
     }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 46px;
+        margin-top: 80px;
+      }
+      .torchon {
+        width: 180px;
+        top: 0;
+        left: 0;
+        opacity: 0.75;
+      }
+      .cocotte {
+        width: 160px;
+        bottom: 20px;
+        right: 5px;
+      }
+      .entrez-goutez {
+        font-size: 18px;
+      }
+    }
   </style>
 
-  <!-- Liens vers les polices Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -151,15 +175,8 @@
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
-  <!-- Lien cliquable vers la table des matières -->
   <a href="Matiere-1.html" class="entrez-goutez" target="_blank">Entrez et goûtez</a>
 
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
-
-
-
-
-
-
