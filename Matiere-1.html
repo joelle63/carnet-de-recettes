@@ -3,149 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table des matières</title>
+  <title>Soupes et veloutés – Ma cuisine du quotidien</title>
+
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      width: 100%;
       background-color: #FFF8DC;
       font-family: 'Montserrat', sans-serif;
+      color: #582900;
+    }
+
+    /* --- CONTENEUR GLOBAL (évite bug du double footer) --- */
+    .page {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
     }
 
-    /* --- VERSION PC (inchangée) --- */
-    h1 {
-      font-family: 'Pinyon Script', cursive;
-      font-size: 72px;
-      color: #800000;
+    /* --- TITRE --- */
+    .titre-principal {
       text-align: center;
-      margin-top: 50px;
-      line-height: 1.1;
-      margin-bottom: 40px;
+      margin-top: 40px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 25px;
+    .titre-principal h1 {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 70px;
+      color: #800000;
+      margin: 0;
     }
 
-    li {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 24px;
-      color: #582900;
-      margin: 10px 0;
-      text-align: left;
+    /* --- LISTE DES RECETTES --- */
+    .recettes {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .recette {
       display: flex;
       align-items: center;
+      gap: 15px;
+      font-size: 24px;
+      font-weight: 600;
     }
 
-    li img {
+    .recette img {
       width: 45px;
-      margin-right: 12px;
+      height: 45px;
+      object-fit: contain;
+      flex-shrink: 0;
     }
 
-    a {
+    .recette a {
       color: #582900;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
-    a:hover {
+    .recette a:hover {
       color: #A63A00;
+      text-decoration: underline;
     }
 
+    /* --- PIED DE PAGE --- */
     footer {
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000;
-      font-size: 20px;
+      font-size: 18px;
       margin-top: auto;
-      padding-bottom: 25px;
+      padding-bottom: 30px; /* 🔽 descend sur PC */
     }
 
-    /* -------------------- RESPONSIVE ajusté -------------------- */
+    /* -------------------- RESPONSIVE -------------------- */
     @media (max-width: 700px) {
-      h1 {
-        font-size: 48px;
+      .titre-principal {
         margin-top: 70px;
-        margin-bottom: 25px;
       }
 
-      ul {
-        margin-top: 40px;
+      .titre-principal h1 {
+        font-size: 46px;
       }
 
-      li {
+      .recettes {
+        margin-top: 80px;
+        gap: 25px;
+        align-items: center;
+      }
+
+      .recette {
         font-size: 22px;
-        margin: 8px 0;
+        gap: 12px;
       }
 
-      li img {
+      .recette img {
         width: 38px;
-        margin-right: 8px;
+        height: 38px;
       }
 
       footer {
         font-size: 15px;
-        margin-top: 60px;     /* 🔽 descendu pour plus d’air */
-        padding-bottom: 35px; /* 🔽 espace final plus doux */
+        padding-bottom: 40px; /* 🔽 descend proprement sur téléphone */
       }
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 38px;
+      .titre-principal {
         margin-top: 60px;
-        margin-bottom: 25px;
       }
 
-      ul {
-        margin-top: 40px;
+      .titre-principal h1 {
+        font-size: 38px;
       }
 
-      li {
+      .recettes {
+        margin-top: 70px;
+        gap: 20px;
+      }
+
+      .recette {
         font-size: 20px;
-        margin: 6px 0;
+        gap: 10px;
       }
 
-      li img {
-        width: 34px;
-        margin-right: 6px;
+      .recette img {
+        width: 32px;
+        height: 32px;
       }
 
       footer {
-        margin-top: 50px;     /* 🔽 encore un peu plus bas pour petits écrans */
         font-size: 13px;
-        padding-bottom: 40px;
+        padding-bottom: 45px; /* 🔽 descend un peu plus bas sur mobile */
       }
     }
   </style>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Ce que j’ai testé et aimé</h1>
+  <div class="page">
+    <div class="titre-principal">
+      <h1>Soupes et veloutés</h1>
+    </div>
 
-  <ul>
-    <li><img src="2-soupe.png" alt=""> <a href="Soupes.html" target="_blank">Soupes & veloutés</a></li>
-    <li><img src="2-Entree.png" alt=""> <a href="Entrees.html" target="_blank">Entrées, quiches & cakes</a></li>
-    <li><img src="emoji_poisson.png" alt=""> <a href="Poissons.html" target="_blank">Poissons & accompagnements</a></li>
-    <li><img src="emoji_viande.png" alt=""> <a href="Viandes.html" target="_blank">Viandes & accompagnements</a></li>
-    <li><img src="emoji_legumes.png" alt=""> <a href="Legumes.html" target="_blank">Légumes ou préparations végétariennes</a></li>
-    <li><img src="emoji_dessert.png" alt=""> <a href="Desserts.html" target="_blank">Desserts</a></li>
-    <li><img src="emoji_marinade.png" alt=""> <a href="Marinades.html" target="_blank">Marinades</a></li>
-    <li><img src="emoji_jus.png" alt=""> <a href="Jus.html" target="_blank">Jus de fruits</a></li>
-  </ul>
+    <div class="recettes">
+      <div class="recette">
+        <img src="emoji_soupe.png" alt="Icône soupe">
+        <a href="0-Soupe-Potimarron.pdf" target="_blank">Soupe de potimarron au chorizo</a>
+      </div>
+    </div>
 
-  <footer>— Carnet de recettes de Mamylou —</footer>
+    <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
+  </div>
 </body>
 </html>
 
