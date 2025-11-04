@@ -83,13 +83,15 @@
       color: #800000;
       font-size: 18px;
       margin-top: auto;
-      padding-bottom: 30px; /* parfait sur PC */
+      padding-bottom: 25px;
     }
 
     /* -------------------- RESPONSIVE -------------------- */
     @media (max-width: 700px) {
-      .titre-principal {
-        margin-top: 70px;
+      .page {
+        justify-content: space-between; /* 🔧 équilibre automatique */
+        padding-top: 60px;
+        padding-bottom: 25px;
       }
 
       .titre-principal h1 {
@@ -97,7 +99,7 @@
       }
 
       .recettes {
-        margin-top: 80px;
+        margin-top: 40px;
         gap: 25px;
         align-items: center;
       }
@@ -114,14 +116,16 @@
 
       footer {
         font-size: 15px;
-        padding-bottom: 0; /* 🔼 remonte encore davantage sur mobile */
-        margin-top: 40px;  /* 🔼 pousse un peu le bloc vers le haut */
+        padding-bottom: 10px;
+        margin-top: 0; /* ✅ plus de saut inutile */
       }
     }
 
     @media (max-width: 480px) {
-      .titre-principal {
-        margin-top: 60px;
+      .page {
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 20px;
       }
 
       .titre-principal h1 {
@@ -129,7 +133,7 @@
       }
 
       .recettes {
-        margin-top: 70px;
+        margin-top: 35px;
         gap: 20px;
       }
 
@@ -145,8 +149,7 @@
 
       footer {
         font-size: 13px;
-        padding-bottom: 0; /* 🔼 encore plus haut */
-        margin-top: 30px;  /* 🔼 le ramène bien visible sans scroll */
+        padding-bottom: 5px;
       }
     }
   </style>
