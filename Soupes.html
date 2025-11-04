@@ -19,7 +19,7 @@
       color: #582900;
     }
 
-    /* --- CONTENEUR GLOBAL (évite bug du double footer) --- */
+    /* --- CONTENEUR GLOBAL --- */
     .page {
       min-height: 100vh;
       display: flex;
@@ -82,7 +82,7 @@
       color: #800000;
       font-size: 18px;
       margin-top: auto;
-      padding-bottom: 30px; /* 🔽 descend sur PC */
+      padding-bottom: 30px; /* parfait pour PC */
     }
 
     /* -------------------- RESPONSIVE -------------------- */
@@ -113,7 +113,7 @@
 
       footer {
         font-size: 15px;
-        padding-bottom: 40px; /* 🔽 descend proprement sur téléphone */
+        padding-bottom: 15px; /* 🔼 remonté sur mobile */
       }
     }
 
@@ -143,7 +143,7 @@
 
       footer {
         font-size: 13px;
-        padding-bottom: 45px; /* 🔽 descend un peu plus bas sur mobile */
+        padding-bottom: 10px; /* 🔼 encore un peu plus haut sur très petit écran */
       }
     }
   </style>
