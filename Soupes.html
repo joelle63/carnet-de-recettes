@@ -25,6 +25,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
     }
 
     /* --- TITRE --- */
@@ -82,7 +83,7 @@
       color: #800000;
       font-size: 18px;
       margin-top: auto;
-      padding-bottom: 30px; /* parfait pour PC */
+      padding-bottom: 30px; /* parfait sur PC */
     }
 
     /* -------------------- RESPONSIVE -------------------- */
@@ -113,7 +114,8 @@
 
       footer {
         font-size: 15px;
-        padding-bottom: 5px; /* 🔼 remonté davantage */
+        padding-bottom: 0; /* 🔼 remonte encore davantage sur mobile */
+        margin-top: 40px;  /* 🔼 pousse un peu le bloc vers le haut */
       }
     }
 
@@ -143,7 +145,8 @@
 
       footer {
         font-size: 13px;
-        padding-bottom: 0px; /* 🔼 encore plus haut sur très petit écran */
+        padding-bottom: 0; /* 🔼 encore plus haut */
+        margin-top: 30px;  /* 🔼 le ramène bien visible sans scroll */
       }
     }
   </style>
@@ -157,7 +160,7 @@
 
     <div class="recettes">
       <div class="recette">
-        <img src="2-Potimarron.png" alt="Icône soupe">
+        <img src="2-soupe.png" alt="Icône soupe">
         <a href="0-Soupe-Potimarron.pdf" target="_blank">Soupe de potimarron au chorizo</a>
       </div>
     </div>
@@ -166,4 +169,3 @@
   </div>
 </body>
 </html>
-
