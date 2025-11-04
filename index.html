@@ -32,8 +32,8 @@
     /* Image de la cocotte */
     .cocotte {
       position: absolute;
-      bottom: 100px; /* 🔼 cocotte remontée */
-      right: 50px;
+      bottom: 180px; /* 🔼 cocotte bien remontée */
+      right: 60px;
       width: 350px;
       opacity: 0.9;
       max-width: 35vw;
@@ -46,7 +46,7 @@
       font-size: 96px;
       color: #800000;
       text-align: center;
-      margin-top: 180px; /* 🔽 titre descendu légèrement */
+      margin-top: 180px;
       line-height: 1.1;
       position: relative;
       z-index: 1;
@@ -96,7 +96,7 @@
       font-weight: bold;
       color: #800000;
       font-size: 20px;
-      padding-bottom: 20px; /* 🔼 pied-de-page remonté */
+      padding-bottom: 80px; /* 🔼 pied-de-page fortement remonté */
       position: relative;
       z-index: 1;
     }
@@ -115,8 +115,11 @@
       }
       .cocotte {
         width: 280px;
-        bottom: 80px; /* 🔼 reste bien visible */
+        bottom: 150px; /* 🔼 adaptée */
         right: 30px;
+      }
+      footer {
+        padding-bottom: 60px;
       }
     }
 
@@ -133,7 +136,7 @@
       }
       .cocotte {
         width: 200px;
-        bottom: 70px;
+        bottom: 120px; /* 🔼 toujours plus haut */
         right: 10px;
       }
       .entrez-goutez {
@@ -141,6 +144,7 @@
       }
       footer {
         font-size: 16px;
+        padding-bottom: 50px;
       }
     }
 
@@ -157,11 +161,14 @@
       }
       .cocotte {
         width: 160px;
-        bottom: 60px;
+        bottom: 100px; /* 🔼 légère remontée aussi sur mobile */
         right: 5px;
       }
       .entrez-goutez {
         font-size: 18px;
+      }
+      footer {
+        padding-bottom: 40px;
       }
     }
   </style>
@@ -180,5 +187,7 @@
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
+
+
 
 
