@@ -102,44 +102,27 @@
     }
 
     /* -------------------- RESPONSIVE -------------------- */
-    @media (max-width: 1000px) {
-      h1 {
-        font-size: 80px;
-      }
-      .torchon {
-        width: 300px;
-        top: 40px;
-        left: 20px;
-      }
-      .cocotte {
-        width: 280px;
-        bottom: 180px;
-        right: 30px;
-      }
-    }
-
-    /* 📱 Tablettes et petits écrans */
     @media (max-width: 700px) {
       h1 {
         font-size: 60px;
-        margin-top: 90px; /* 🔼 titre un peu plus haut */
+        margin-top: 180px; /* 🔽 redescend le bloc central */
       }
       .torchon {
         width: 220px;
-        top: 40px; /* 🔽 descend pour ne pas coller le bord */
+        top: 40px;
         left: 10px;
-        opacity: 0.8;
+        opacity: 0.8; /* inchangé */
       }
       .entrez-goutez {
         font-size: 20px;
-        margin-bottom: 60px;
+        margin-top: 40px;
       }
       .cocotte {
-        position: relative; /* ✅ passe dans le flux, sous le lien */
+        position: relative;
         bottom: auto;
         right: auto;
         width: 200px;
-        margin-top: 40px;
+        margin-top: 60px; /* 🔽 descend sous le lien */
         opacity: 0.9;
         z-index: 1;
       }
@@ -147,19 +130,18 @@
         position: relative;
         bottom: 0;
         font-size: 16px;
-        margin-top: 50px;
+        margin-top: 70px; /* 🔽 footer plus bas */
       }
     }
 
-    /* 📱 Téléphones compacts */
     @media (max-width: 480px) {
       h1 {
         font-size: 46px;
-        margin-top: 70px; /* 🔼 encore un peu plus haut */
+        margin-top: 160px; /* 🔽 un peu plus bas encore */
       }
       .torchon {
         width: 180px;
-        top: 30px; /* 🔽 un peu plus bas */
+        top: 30px;
         left: 0;
         opacity: 0.75;
       }
@@ -168,10 +150,10 @@
       }
       .cocotte {
         width: 160px;
-        margin-top: 40px;
+        margin-top: 60px;
       }
       footer {
-        margin-top: 40px;
+        margin-top: 60px;
       }
     }
   </style>
@@ -190,7 +172,6 @@
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
-
 
 
 
