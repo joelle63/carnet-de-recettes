@@ -19,21 +19,21 @@
       overflow-x: hidden;
     }
 
-    /* --- VERSION PC ajustée --- */
+    /* --- VERSION PC (inchangée) --- */
     h1 {
       font-family: 'Pinyon Script', cursive;
       font-size: 72px;
       color: #800000;
       text-align: center;
-      margin-top: 50px;       /* 🔼 remonté */
+      margin-top: 50px;
       line-height: 1.1;
-      margin-bottom: 40px;    /* 🔼 plus d’espace avec la liste */
+      margin-bottom: 40px;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin-top: 25px;       /* 🔼 espacé du titre */
+      margin-top: 25px;
     }
 
     li {
@@ -75,12 +75,12 @@
     @media (max-width: 700px) {
       h1 {
         font-size: 48px;
-        margin-top: 70px;      /* ✅ on garde cette position */
-        margin-bottom: 25px;   /* 🔼 descend un peu l’arborescence */
+        margin-top: 70px;
+        margin-bottom: 25px;
       }
 
       ul {
-        margin-top: 40px;      /* 🔼 davantage d’espace sous le titre */
+        margin-top: 40px;
       }
 
       li {
@@ -95,7 +95,8 @@
 
       footer {
         font-size: 15px;
-        margin-top: 25px;
+        margin-top: 60px;     /* 🔽 descendu pour plus d’air */
+        padding-bottom: 35px; /* 🔽 espace final plus doux */
       }
     }
 
@@ -103,11 +104,11 @@
       h1 {
         font-size: 38px;
         margin-top: 60px;
-        margin-bottom: 25px;   /* 🔼 laisse respirer avant la liste */
+        margin-bottom: 25px;
       }
 
       ul {
-        margin-top: 40px;      /* 🔼 descend bien la liste */
+        margin-top: 40px;
       }
 
       li {
@@ -121,8 +122,9 @@
       }
 
       footer {
-        margin-top: 25px;
+        margin-top: 50px;     /* 🔽 encore un peu plus bas pour petits écrans */
         font-size: 13px;
+        padding-bottom: 40px;
       }
     }
   </style>
