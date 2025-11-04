@@ -2,7 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ clé du responsive -->
   <title>Ma cuisine du quotidien</title>
+
   <style>
     body {
       margin: 0;
@@ -13,6 +15,7 @@
       flex-direction: column;
       min-height: 100vh;
       position: relative;
+      overflow-x: hidden; /* ✅ évite les débordements horizontaux sur mobile */
     }
 
     /* Image du torchon */
@@ -22,6 +25,7 @@
       left: 60px;
       width: 400px;
       opacity: 0.9;
+      max-width: 40vw; /* ✅ s’adapte sur petits écrans */
     }
 
     /* Image de la cocotte */
@@ -31,6 +35,7 @@
       right: 50px;
       width: 350px;
       opacity: 0.9;
+      max-width: 35vw; /* ✅ idem */
     }
 
     /* Titre principal */
@@ -89,6 +94,51 @@
       font-size: 20px;
       padding-bottom: 40px;
     }
+
+    /* -------------------- RESPONSIVE -------------------- */
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 70px;
+        margin-top: 80px;
+      }
+      .torchon {
+        width: 250px;
+        left: 20px;
+        top: 50px;
+      }
+      .cocotte {
+        width: 220px;
+        right: 20px;
+        bottom: 40px;
+      }
+      .entrez-goutez {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 54px;
+        margin-top: 60px;
+      }
+      .torchon {
+        width: 180px;
+        left: 10px;
+        top: 40px;
+      }
+      .cocotte {
+        width: 160px;
+        right: 10px;
+        bottom: 30px;
+      }
+      .entrez-goutez {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      footer {
+        font-size: 16px;
+      }
+    }
   </style>
 
   <!-- Liens vers les polices Google Fonts -->
@@ -101,14 +151,12 @@
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
-  <!-- Lien cliquable vers la recette PDF -->
+  <!-- Lien cliquable vers la table des matières -->
   <a href="Matiere-1.html" class="entrez-goutez" target="_blank">Entrez et goûtez</a>
 
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
-
-
 
 
 
