@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Légumes ou préparations végétariennes – Ma cuisine du quotidien</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #FFF8DC;
+      font-family: 'Montserrat', sans-serif;
+      color: #582900;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ---- TITRE ---- */
+    .titre-principal {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .titre-principal h1 {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 70px;
+      color: #800000;
+      margin: 0;
+    }
+
+    /* ---- LISTE ---- */
+    .recettes {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .recette {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .recette img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .recette a {
+      color: #582900;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .recette a:hover {
+      color: #A63A00;
+      text-decoration: underline;
+    }
+
+    /* ---- PIED DE PAGE ---- */
+    footer {
+      margin-top: auto;
+      text-align: center;
+      font-weight: bold;
+      color: #800000;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 700px) {
+      .titre-principal {
+        margin-top: 60px; /* 🔼 un peu plus haut */
+      }
+
+      .titre-principal h1 {
+        font-size: 48px;
+      }
+
+      .recettes {
+        margin-top: 30px; /* 🔽 rapprochée du titre */
+        gap: 20px;
+        align-items: center;
+      }
+
+      .recette {
+        font-size: 20px;
+        gap: 10px;
+      }
+
+      .recette img {
+        width: 34px;
+        height: 34px;
+      }
+
+      footer {
+        font-size: 15px;
+        margin-bottom: 10px; /* 🔼 remonte le pied visible sans scroll */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .titre-principal {
+        margin-top: 50px;
+      }
+
+      .titre-principal h1 {
+        font-size: 38px;
+      }
+
+      .recettes {
+        margin-top: 25px;
+        gap: 15px;
+      }
+
+      .recette {
+        font-size: 18px;
+      }
+
+      footer {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="titre-principal">
+    <h1>Légumes ou préparations végétariennes</h1>
+  </div>
+
+  <div class="recettes">
+    <div class="recette">
+      <img src="2-Risotto.png" alt="Icône soupe">
+      <a href="0-Risotto.pdf" target="_blank">Risotto aux champignons</a>
+    </div>
+  </div>
+
+  <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
+</body>
+</html>
