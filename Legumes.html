@@ -40,7 +40,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 18px;
+      gap: 0; /* 🔹 supprime presque tout l’espace entre les lignes */
     }
 
     .recette {
@@ -68,6 +68,35 @@
       text-decoration: underline;
     }
 
+    /* ---- SOUS-LIGNE TECHNIQUE ---- */
+    .sous-recette {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 500;
+      margin-left: 85px;
+      margin-top: -10px; /* 🔹 colle la ligne technique au-dessus */
+    }
+
+    .sous-recette img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      opacity: 0.9;
+    }
+
+    .sous-recette a {
+      color: #5A3A00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .sous-recette a:hover {
+      color: #A63A00;
+      text-decoration: underline;
+    }
+
     /* ---- PIED DE PAGE ---- */
     footer {
       margin-top: auto;
@@ -81,7 +110,7 @@
     /* ---------------- RESPONSIVE ---------------- */
     @media (max-width: 700px) {
       .titre-principal {
-        margin-top: 60px; /* 🔼 un peu plus haut */
+        margin-top: 60px;
       }
 
       .titre-principal h1 {
@@ -89,8 +118,8 @@
       }
 
       .recettes {
-        margin-top: 30px; /* 🔽 rapprochée du titre */
-        gap: 20px;
+        margin-top: 30px;
+        gap: 0;
         align-items: center;
       }
 
@@ -104,9 +133,20 @@
         height: 34px;
       }
 
+      .sous-recette {
+        margin-left: 45px;
+        font-size: 18px;
+        margin-top: -8px;
+      }
+
+      .sous-recette img {
+        width: 28px;
+        height: 28px;
+      }
+
       footer {
         font-size: 15px;
-        margin-bottom: 10px; /* 🔼 remonte le pied visible sans scroll */
+        margin-bottom: 10px;
       }
     }
 
@@ -121,11 +161,22 @@
 
       .recettes {
         margin-top: 25px;
-        gap: 15px;
+        gap: 0;
       }
 
       .recette {
         font-size: 18px;
+      }
+
+      .sous-recette {
+        margin-left: 35px;
+        font-size: 16px;
+        margin-top: -6px;
+      }
+
+      .sous-recette img {
+        width: 24px;
+        height: 24px;
       }
 
       footer {
@@ -143,11 +194,19 @@
 
   <div class="recettes">
     <div class="recette">
-      <img src="2-Risotto.png" alt="Icône soupe">
+      <img src="2-Risotto.png" alt="Icône recette">
       <a href="0-Risotto.pdf" target="_blank">Risotto aux champignons</a>
+    </div>
+
+    <!-- 🔹 Sous-ligne technique associée -->
+    <div class="sous-recette">
+      <img src="2-Loupe.png" alt="Icône technique">
+      <a href="0-Risotto_Methode_Technique.pdf" target="_blank">Technique du risotto parfait</a>
     </div>
   </div>
 
   <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
 </body>
 </html>
+
+
