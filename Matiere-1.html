@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table des matières</title>
+  <title>Table des matières – Carnet de recettes de Mamylou</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #FFF8DC;
+      background-color: rgb(242, 232, 214); /* 🌿 fond crème rosé pour impression */
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
@@ -19,38 +21,43 @@
       overflow-x: hidden;
     }
 
-    /* --- VERSION PC (inchangée sauf footer) --- */
+    /* --- TITRE --- */
     h1 {
       font-family: 'Pinyon Script', cursive;
       font-size: 72px;
       color: #800000;
       text-align: center;
-      margin-top: 50px;
+      margin-top: 60px;
       line-height: 1.1;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
 
+    /* --- LISTE --- */
     ul {
       list-style: none;
       padding: 0;
-      margin-top: 25px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px; /* 🌸 écart harmonieux entre lignes */
     }
 
     li {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 24px;
+      font-size: 26px;
       color: #582900;
-      margin: 10px 0;
-      text-align: left;
       display: flex;
       align-items: center;
     }
 
     li img {
       width: 45px;
-      margin-right: 12px;
+      height: 45px;
+      margin-right: 14px;
+      object-fit: contain;
     }
 
+    /* --- LIENS (identiques à la page Soupes) --- */
     a {
       color: #582900;
       text-decoration: none;
@@ -58,9 +65,11 @@
     }
 
     a:hover {
-      color: #003366;
+      color: #A63A00;
+      text-decoration: underline;
     }
 
+    /* --- PIED DE PAGE --- */
     footer {
       text-align: center;
       font-family: 'Montserrat', sans-serif;
@@ -68,69 +77,64 @@
       color: #800000;
       font-size: 20px;
       margin-top: auto;
-      padding-bottom: 60px; /* 🔽 descendu un peu plus bas */
+      padding-bottom: 60px;
     }
 
-    /* -------------------- RESPONSIVE ajusté -------------------- */
+    /* --- RESPONSIVE --- */
     @media (max-width: 700px) {
       h1 {
-        font-size: 48px;
+        font-size: 52px;
         margin-top: 70px;
         margin-bottom: 25px;
       }
 
       ul {
-        margin-top: 40px;
+        align-items: center;
+        gap: 14px;
       }
 
       li {
         font-size: 22px;
-        margin: 8px 0;
       }
 
       li img {
         width: 38px;
-        margin-right: 8px;
+        margin-right: 10px;
       }
 
       footer {
         font-size: 15px;
-        margin-top: 80px;     /* 🔽 descend un peu plus */
-        padding-bottom: 60px; /* 🔽 plus d’air en bas */
+        margin-top: 60px;
       }
     }
 
     @media (max-width: 480px) {
       h1 {
         font-size: 38px;
-        margin-top: 60px;
-        margin-bottom: 25px;
+        margin-top: 55px;
       }
 
       ul {
-        margin-top: 40px;
+        gap: 12px;
       }
 
       li {
         font-size: 20px;
-        margin: 6px 0;
       }
 
       li img {
         width: 34px;
-        margin-right: 6px;
+        margin-right: 8px;
       }
 
       footer {
-        margin-top: 70px;     /* 🔽 descend davantage */
         font-size: 13px;
-        padding-bottom: 70px; /* 🔽 espace plus généreux */
+        padding-bottom: 40px;
       }
     }
   </style>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <h1>Ce que j’ai testé et aimé</h1>
 
@@ -148,16 +152,3 @@
   <footer>— Carnet de recettes de Mamylou —</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
