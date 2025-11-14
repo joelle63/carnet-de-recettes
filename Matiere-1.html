@@ -3,61 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table des matières – Carnet de recettes de Mamylou</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <title>Table des matières</title>
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: rgb(255, 248, 220); /* 🌿 fond crème rosé pour impression */
+      background-color: #FFF8DC;
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: center;   /* 🔹 centre le bloc UL */
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
     }
 
-    /* --- TITRE --- */
     h1 {
       font-family: 'Pinyon Script', cursive;
       font-size: 72px;
       color: #800000;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 50px;
       line-height: 1.1;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
-    /* --- LISTE --- */
     ul {
       list-style: none;
       padding: 0;
-      margin-top: 10px;
+      margin-top: 25px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 18px; /* 🌸 écart harmonieux entre lignes */
+      gap: 10px;
+      width: 90%;            /* 🔹 largeur fixe mais centrée */
+      max-width: 550px;      /* 🔹 limite propre */
     }
 
     li {
-      font-size: 26px;
+      font-size: 24px;
       color: #582900;
       display: flex;
       align-items: center;
+      justify-content: flex-start; /* 🔹 assure l’alignement des icônes */
+      gap: 12px;
     }
 
     li img {
       width: 45px;
-      height: 45px;
-      margin-right: 14px;
-      object-fit: contain;
+      flex-shrink: 0;        /* 🔹 empêche l’icône de rétrécir */
     }
 
-    /* --- LIENS (identiques à la page Soupes) --- */
     a {
       color: #582900;
       text-decoration: none;
@@ -66,13 +62,10 @@
 
     a:hover {
       color: #A63A00;
-      text-decoration: underline;
     }
 
-    /* --- PIED DE PAGE --- */
     footer {
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000;
       font-size: 20px;
@@ -80,69 +73,77 @@
       padding-bottom: 60px;
     }
 
-    /* --- RESPONSIVE --- */
+    /* -------------------- RESPONSIVE -------------------- */
     @media (max-width: 700px) {
+
       h1 {
-        font-size: 52px;
+        font-size: 48px;
         margin-top: 70px;
         margin-bottom: 25px;
       }
 
       ul {
-        align-items: center;
-        gap: 14px;
+        width: 92%;
+        max-width: 450px;
       }
 
       li {
         font-size: 22px;
+        gap: 10px;
       }
 
       li img {
         width: 38px;
-        margin-right: 10px;
       }
 
       footer {
         font-size: 15px;
-        margin-top: 60px;
+        margin-top: 80px;
+        padding-bottom: 60px;
       }
     }
 
     @media (max-width: 480px) {
+
       h1 {
         font-size: 38px;
-        margin-top: 55px;
+        margin-top: 60px;
+        margin-bottom: 25px;
       }
 
       ul {
-        gap: 12px;
+        width: 94%;
+        max-width: 380px;
       }
 
       li {
         font-size: 20px;
+        gap: 10px;
       }
 
       li img {
         width: 34px;
-        margin-right: 8px;
       }
 
       footer {
+        margin-top: 70px;
         font-size: 13px;
-        padding-bottom: 40px;
+        padding-bottom: 70px;
       }
     }
   </style>
-</head>
 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
+</head>
 <body>
+
   <h1>Ce que j’ai testé et aimé</h1>
 
   <ul>
     <li><img src="2-soupe.png" alt=""> <a href="Soupes.html" target="_blank">Soupes & veloutés</a></li>
     <li><img src="2-Entree.png" alt=""> <a href="Entrees.html" target="_blank">Entrées, quiches & cakes</a></li>
     <li><img src="2-Poisson.png" alt=""> <a href="Poissons.html" target="_blank">Poissons & accompagnements</a></li>
-    <li><img src="2-viande.png" alt=""> <a href="Viandes.html" target="_blank">Viandes & accompagnements</a></li>
+    <li><img src="2-Viande.png" alt=""> <a href="Viandes.html" target="_blank">Viandes & accompagnements</a></li>
     <li><img src="2-Legumes.png" alt=""> <a href="Legumes.html" target="_blank">Légumes ou préparations végétariennes</a></li>
     <li><img src="2-Dessert.png" alt=""> <a href="Desserts.html" target="_blank">Desserts</a></li>
     <li><img src="2-Marinade.png" alt=""> <a href="Marinades.html" target="_blank">Marinades</a></li>
@@ -150,6 +151,6 @@
   </ul>
 
   <footer>— Carnet de recettes de Mamylou —</footer>
+
 </body>
 </html>
-
