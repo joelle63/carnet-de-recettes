@@ -2,12 +2,6 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-
-  <!-- 🔥 Empêche le téléphone de garder l’ancienne version -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ma cuisine du quotidien</title>
 
@@ -35,9 +29,10 @@
       z-index: 0;
     }
 
+    /* 🔥 nouvelle cocotte */
     .cocotte {
       position: absolute;
-      bottom: 60px;
+      bottom: 100px; /* au-dessus du footer */
       right: 50px;
       width: 350px;
       opacity: 0.9;
@@ -95,21 +90,24 @@
       border-color: #A63A00;
     }
 
+    /* 🔥 nouveau footer FIXÉ EN BAS */
     footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000;
       font-size: 20px;
-      margin-top: auto;
-      padding-bottom: 40px;
-      position: relative;
-      z-index: 1;
+      padding: 15px 0;
+      background-color: #FFF8DC;
+      z-index: 3;
     }
 
     /* ----------- TABLETTE ----------- */
     @media (max-width: 700px) {
-
       h1 {
         font-size: 60px;
         margin-top: 180px;
@@ -126,16 +124,12 @@
       }
 
       .select-recette {
-        margin-top: 60px;
+        transform: translateY(10px);
       }
 
       .cocotte {
         width: 200px;
-        bottom: 40px;
-      }
-
-      footer {
-        margin-top: 100px;
+        bottom: 90px; /* ajusté */
       }
     }
 
@@ -157,18 +151,15 @@
         font-size: 18px;
       }
 
+      /* 🔥 rapprocher les dernières recettes */
       .select-recette {
         font-size: 16px;
-        margin-top: 40px;
+        margin-top: 10px;
       }
 
       .cocotte {
         width: 160px;
-        bottom: 20px;
-      }
-
-      footer {
-        margin-top: 80px;
+        bottom: 90px; /* remontée et stable */
       }
     }
   </style>
@@ -176,8 +167,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 
-<!-- 🔥 version 5 pour casser le cache mobile -->
-<body data-version="5">
+<body>
 
   <img src="torchon.png" alt="torchon décoratif" class="torchon">
 
@@ -204,3 +194,4 @@
 
 </body>
 </html>
+
