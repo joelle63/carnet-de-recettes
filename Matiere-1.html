@@ -13,7 +13,7 @@
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;   /* 🔹 centre le bloc UL */
+      align-items: center;
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
@@ -26,18 +26,18 @@
       text-align: center;
       margin-top: 50px;
       line-height: 1.1;
-      margin-bottom: 40px;
+      margin-bottom: 10px;     /* 🔹 rapproché du UL */
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin-top: 25px;
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      width: 90%;            /* 🔹 largeur fixe mais centrée */
-      max-width: 550px;      /* 🔹 limite propre */
+      width: 90%;
+      max-width: 550px;
     }
 
     li {
@@ -45,13 +45,13 @@
       color: #582900;
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* 🔹 assure l’alignement des icônes */
+      justify-content: flex-start;
       gap: 12px;
     }
 
     li img {
       width: 45px;
-      flex-shrink: 0;        /* 🔹 empêche l’icône de rétrécir */
+      flex-shrink: 0;
     }
 
     a {
@@ -79,7 +79,7 @@
       h1 {
         font-size: 48px;
         margin-top: 70px;
-        margin-bottom: 25px;
+        margin-bottom: 15px; /* cohérent */
       }
 
       ul {
@@ -108,7 +108,7 @@
       h1 {
         font-size: 38px;
         margin-top: 60px;
-        margin-bottom: 25px;
+        margin-bottom: 15px; /* cohérent */
       }
 
       ul {
@@ -140,14 +140,14 @@
   <h1>Ce que j’ai testé et aimé</h1>
 
   <ul>
-    <li><img src="2-soupe.png" alt=""> <a href="Soupes.html" target="_blank">Soupes & veloutés</a></li>
-    <li><img src="2-Entree.png" alt=""> <a href="Entrees.html" target="_blank">Entrées, quiches & cakes</a></li>
-    <li><img src="2-Poisson.png" alt=""> <a href="Poissons.html" target="_blank">Poissons & accompagnements</a></li>
-    <li><img src="2-Viande.png" alt=""> <a href="Viandes.html" target="_blank">Viandes & accompagnements</a></li>
-    <li><img src="2-Legumes.png" alt=""> <a href="Legumes.html" target="_blank">Légumes ou préparations végétariennes</a></li>
-    <li><img src="2-Dessert.png" alt=""> <a href="Desserts.html" target="_blank">Desserts</a></li>
-    <li><img src="2-Marinade.png" alt=""> <a href="Marinades.html" target="_blank">Marinades</a></li>
-    <li><img src="2-Jus.png" alt=""> <a href="Jus.html" target="_blank">Jus de fruits</a></li>
+    <li><img src="2-soupe.png" alt=""> <a href="Soupes.html">Soupes & veloutés</a></li>
+    <li><img src="2-Entree.png" alt=""> <a href="Quiche.html">Entrées, quiches & cakes</a></li>
+    <li><img src="2-Poisson.png" alt=""> <a href="Poissons.html">Poissons & accompagnements</a></li>
+    <li><img src="2-Viande.png" alt=""> <a href="Viandes.html">Viandes & accompagnements</a></li>
+    <li><img src="2-Legumes.png" alt=""> <a href="Legumes.html">Légumes ou préparations végétariennes</a></li>
+    <li><img src="2-Dessert.png" alt=""> <a href="Desserts.html">Desserts</a></li>
+    <li><img src="2-Marinade.png" alt=""> <a href="Marinades.html">Marinades</a></li>
+    <li><img src="2-Jus.png" alt=""> <a href="Jus.html">Jus de fruits</a></li>
   </ul>
 
   <footer>— Carnet de recettes de Mamylou —</footer>
