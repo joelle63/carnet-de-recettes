@@ -2,6 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+
+  <!-- 🔥 Empêche le téléphone de garder l’ancienne version -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ma cuisine du quotidien</title>
 
@@ -119,20 +125,17 @@
         font-size: 20px;
       }
 
-      /* 🔹 rapproche un peu la liste du bas */
       .select-recette {
-        margin-top: 40px; 
+        margin-top: 60px;
       }
 
       .cocotte {
         width: 200px;
-        bottom: 50px;  /* position propre, pas de transform */
-        right: 30px;
+        bottom: 40px;
       }
 
       footer {
-        font-size: 16px;
-        margin-top: 80px;
+        margin-top: 100px;
       }
     }
 
@@ -154,22 +157,18 @@
         font-size: 18px;
       }
 
-      /* 🔹 rapproche la liste de la cocotte */
       .select-recette {
         font-size: 16px;
-        margin-top: 25px;
+        margin-top: 40px;
       }
 
       .cocotte {
         width: 160px;
-        bottom: 50px;  /* cocotte en bas, propre */
-        right: 20px;
+        bottom: 20px;
       }
 
       footer {
-        margin-top: 70px;
-        font-size: 13px;
-        padding-bottom: 60px;
+        margin-top: 80px;
       }
     }
   </style>
@@ -177,7 +176,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<!-- 🔥 version 5 pour casser le cache mobile -->
+<body data-version="5">
 
   <img src="torchon.png" alt="torchon décoratif" class="torchon">
 
