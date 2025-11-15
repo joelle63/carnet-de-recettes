@@ -29,10 +29,10 @@
       z-index: 0;
     }
 
-    /* -------- PC -------- */
+    /* ⭐ PC : cocotte plus basse ⭐ */
     .cocotte {
       position: absolute;
-      bottom: 60px;
+      bottom: 20px;     /* ← au lieu de 60px */
       right: 50px;
       width: 350px;
       opacity: 0.9;
@@ -51,7 +51,6 @@
       z-index: 1;
     }
 
-    /* BOUTON */
     .entrez-goutez {
       display: inline-block;
       background-color: #800000;
@@ -60,19 +59,19 @@
       border-radius: 10px;
       font-weight: bold;
       font-size: 24px;
-      margin-top: 10px;
+      margin-top: -10px;
       text-decoration: none;
       cursor: pointer;
       position: relative;
       z-index: 2;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
     .entrez-goutez:hover {
       background-color: #A63A00;
       transform: scale(1.03);
     }
 
-    /* LISTE DEROUlANTE */
     .select-recette {
       margin-top: 100px;
       font-size: 20px;
@@ -86,6 +85,10 @@
       z-index: 2;
     }
 
+    .select-recette:hover {
+      border-color: #A63A00;
+    }
+
     footer {
       text-align: center;
       font-family: 'Montserrat', sans-serif;
@@ -94,80 +97,82 @@
       font-size: 20px;
       margin-top: auto;
       padding-bottom: 40px;
+      position: relative;
       z-index: 1;
     }
 
-    /* -------- TABLETTE -------- */
+    /* 📱 TABLETTE */
     @media (max-width: 700px) {
-
-      h1 {
-        font-size: 60px;
-        margin-top: 180px;
-      }
+      h1 { font-size: 60px; margin-top: 180px; }
 
       .torchon {
         width: 220px;
         top: 40px;
         left: 10px;
+        opacity: 0.8;
       }
 
       .entrez-goutez {
         font-size: 20px;
+        margin-top: -5px;
       }
 
-      /* On descend juste un peu */
       .select-recette {
+        font-size: 18px;
+        padding: 8px 10px;
         margin-top: 70px;
       }
 
-      /* cocotte devient RELATIVE pour rester visible */
       .cocotte {
         position: relative;
-        right: 0;
-        bottom: 0;
-        margin-top: 40px;
-        width: 240px;
+        bottom: auto;
+        right: auto;
+        width: 200px;
+        margin-top: 60px;
+        opacity: 0.9;
+        z-index: 1;
       }
 
       footer {
-        margin-top: 20px; /* visible sans scroller */
+        position: relative;
+        bottom: 0;
+        font-size: 16px;
+        margin-top: 100px;
       }
     }
 
-    /* -------- TELEPHONE -------- */
+    /* 📱 TÉLÉPHONE */
     @media (max-width: 480px) {
-
-      h1 {
-        font-size: 46px;
-        margin-top: 150px;
-      }
+      h1 { font-size: 46px; margin-top: 160px; }
 
       .torchon {
         width: 180px;
         top: 30px;
         left: 0;
+        opacity: 0.75;
       }
 
       .entrez-goutez {
         font-size: 18px;
+        margin-top: -5px;
       }
 
       .select-recette {
-        margin-top: 50px;
+        font-size: 16px;
+        margin-top: 60px;
       }
 
+      /* ⭐ MOBILE : cocotte plus basse + plus à droite ⭐ */
       .cocotte {
-        position: relative;
-        width: 170px;
-        margin-top: 40px;
-        right: -10px; /* léger déplacement vers la droite */
+        width: 160px;
+        margin-top: 90px;        /* ↓ descendue */
+        transform: translateX(20px); /* → poussée à droite */
       }
 
       footer {
-        margin-top: 20px;
+        margin-top: 60px;
       }
     }
-
   </style>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
