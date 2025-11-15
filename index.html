@@ -50,7 +50,6 @@
       z-index: 1;
     }
 
-    /* ⭐ BOUTON "ENTREZ ET GOÛTEZ" — ajouté ⭐ */
     .entrez-goutez {
       display: inline-block;
       background-color: #800000;
@@ -59,9 +58,7 @@
       border-radius: 10px;
       font-weight: bold;
       font-size: 24px;
-
-      margin-top: -10px;  /* valeur que tu avais */
-
+      margin-top: 10px;
       text-decoration: none;
       cursor: pointer;
       position: relative;
@@ -76,7 +73,7 @@
 
     /* ----------- MENU DÉROULANT ----------- */
     .select-recette {
-      margin-top: 100px;  /* valeur que tu avais */
+      margin-top: 100px;
       font-size: 20px;
       padding: 10px 14px;
       border-radius: 8px;
@@ -147,8 +144,8 @@
       }
     }
 
-    /* 📱 TÉLÉPHONE */
-    @media (max-width: 480px) {
+    /* 📱 TÉLÉPHONE — élargi pour forcer ton mobile à l’utiliser */
+    @media (max-width: 600px) {
       h1 {
         font-size: 46px;
         margin-top: 160px;
@@ -171,9 +168,11 @@
         margin-top: 60px;
       }
 
+      /* ⭐ cocotte descendue + poussée à droite ⭐ */
       .cocotte {
         width: 160px;
-        margin-top: 60px;
+        margin-top: 90px;       /* descend */
+        transform: translateX(20px); /* décale à droite */
       }
 
       footer {
@@ -191,7 +190,6 @@
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
-  <!-- ⭐ LE BOUTON REPLACÉ, RIEN D’AUTRE ⭐ -->
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
 
   <select class="select-recette" onchange="
@@ -213,3 +211,4 @@
 
 </body>
 </html>
+
