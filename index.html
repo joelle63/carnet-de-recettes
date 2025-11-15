@@ -19,7 +19,6 @@
       overflow-x: hidden;
     }
 
-    /* Image du torchon */
     .torchon {
       position: absolute;
       top: 70px;
@@ -30,10 +29,9 @@
       z-index: 0;
     }
 
-    /* Image de la cocotte */
     .cocotte {
       position: absolute;
-      bottom: 60px;         /* ✅ redescendue à droite */
+      bottom: 60px;
       right: 50px;
       width: 350px;
       opacity: 0.9;
@@ -41,7 +39,6 @@
       z-index: 0;
     }
 
-    /* Titre principal */
     h1 {
       font-family: 'Pinyon Script', cursive;
       font-size: 96px;
@@ -53,7 +50,6 @@
       z-index: 1;
     }
 
-    /* Lien vers la table des matières */
     .entrez-goutez {
       display: inline-block;
       font-family: 'Montserrat', sans-serif;
@@ -88,7 +84,6 @@
       background-color: #A63A00;
     }
 
-    /* Pied de page */
     footer {
       text-align: center;
       font-family: 'Montserrat', sans-serif;
@@ -96,16 +91,15 @@
       color: #800000;
       font-size: 20px;
       margin-top: auto;
-      padding-bottom: 40px; /* ✅ redescendu */
+      padding-bottom: 40px;
       position: relative;
       z-index: 1;
     }
 
-    /* -------------------- RESPONSIVE -------------------- */
     @media (max-width: 700px) {
       h1 {
         font-size: 60px;
-        margin-top: 180px; /* 🔽 redescend le bloc central */
+        margin-top: 180px;
       }
       .torchon {
         width: 220px;
@@ -118,7 +112,7 @@
         margin-top: 40px;
       }
       .cocotte {
-        position: relative; /* ✅ passe dans le flux */
+        position: relative;
         bottom: auto;
         right: auto;
         width: 200px;
@@ -165,7 +159,8 @@
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
-  <a href="Matiere-1.html" class="entrez-goutez" target="_blank">Entrez et goûtez</a>
+  <!-- Lien SANS target -->
+  <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
 
   <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
 
