@@ -119,18 +119,20 @@
         font-size: 20px;
       }
 
-      /* 🔹 rapproche du bas */
+      /* 🔹 rapproche un peu la liste du bas */
       .select-recette {
-        transform: translateY(10px);
+        margin-top: 40px; 
       }
 
       .cocotte {
         width: 200px;
-        transform: translateY(60px); /* plus bas */
+        bottom: 50px;  /* position propre, pas de transform */
+        right: 30px;
       }
 
       footer {
-        margin-top: 70px;
+        font-size: 16px;
+        margin-top: 80px;
       }
     }
 
@@ -155,16 +157,19 @@
       /* 🔹 rapproche la liste de la cocotte */
       .select-recette {
         font-size: 16px;
-        transform: translateY(20px);
+        margin-top: 25px;
       }
 
       .cocotte {
         width: 160px;
-        transform: translateY(75px); /* légèrement plus bas */
+        bottom: 50px;  /* cocotte en bas, propre */
+        right: 20px;
       }
 
       footer {
-        margin-top: 60px;
+        margin-top: 70px;
+        font-size: 13px;
+        padding-bottom: 60px;
       }
     }
   </style>
