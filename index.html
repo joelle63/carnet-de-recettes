@@ -61,7 +61,7 @@
       position: relative;
       cursor: pointer;
       transition: color 0.3s ease;
-      z-index: 1;
+      z-index: 2;
     }
 
     .entrez-goutez::after {
@@ -83,6 +83,26 @@
       width: 100%;
       background-color: #A63A00;
     }
+
+    /* ----------- MENU DÉROULANT ----------- */
+    .select-recette {
+      margin-top: 20px;
+      font-size: 20px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 2px solid #800000;
+      background-color: #FFF;
+      color: #582900;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .select-recette:hover {
+      border-color: #A63A00;
+    }
+
+    /* -------------------------------------- */
 
     footer {
       text-align: center;
@@ -110,6 +130,10 @@
       .entrez-goutez {
         font-size: 20px;
         margin-top: 40px;
+      }
+      .select-recette {
+        font-size: 18px;
+        padding: 8px 10px;
       }
       .cocotte {
         position: relative;
@@ -142,6 +166,9 @@
       .entrez-goutez {
         font-size: 18px;
       }
+      .select-recette {
+        font-size: 16px;
+      }
       .cocotte {
         width: 160px;
         margin-top: 60px;
@@ -154,16 +181,34 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
   <img src="torchon.png" alt="torchon décoratif" class="torchon">
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
-  <!-- Lien SANS target -->
+  <!-- 🔹 LE LIEN D’ABORD -->
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
+
+  <!-- 🔹 ENSUITE LE MENU DÉROULANT -->
+  <select class="select-recette" onchange="
+      if (this.value.endsWith('.pdf')) {
+          window.open(this.value, '_blank');
+      } else if (this.value) {
+          window.location.href = this.value;
+      }
+  ">
+    <option value="">— Dernières recettes —</option>
+    <option value="0-quiche-bleu.pdf">Quiche au bleu 15/11/2025</option>
+    <option value="0-jus-pomme-orange.pdf">Jus tiède pomme-orange 15/11/2025</option>
+    <option value="0-saute-de-veau.pdf">Sauté de veau aux panais 15/11/2025</option>
+  </select>
 
   <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
 
   <footer>— Carnet de recettes de Mamylou —</footer>
+
 </body>
 </html>
+
