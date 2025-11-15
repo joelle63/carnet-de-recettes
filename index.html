@@ -29,7 +29,6 @@
       z-index: 0;
     }
 
-    /* PC = absolute */
     .cocotte {
       position: absolute;
       bottom: 60px;
@@ -45,7 +44,7 @@
       font-size: 96px;
       color: #800000;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 120px;
       line-height: 1.1;
       position: relative;
       z-index: 1;
@@ -64,79 +63,86 @@
       cursor: pointer;
       position: relative;
       z-index: 2;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .entrez-goutez:hover {
-      background-color: #A63A00;
-      transform: scale(1.03);
     }
 
     .select-recette {
-      margin-top: 100px;
+      margin-top: 80px;
       font-size: 20px;
       padding: 10px 14px;
       border-radius: 8px;
       border: 2px solid #800000;
       background-color: #FFF;
       color: #582900;
-      font-family: 'Montserrat', sans-serif;
-      cursor: pointer;
       z-index: 2;
-    }
-
-    .select-recette:hover {
-      border-color: #A63A00;
     }
 
     footer {
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000;
       font-size: 20px;
       margin-top: auto;
-      padding-bottom: 40px;
+      padding-bottom: 30px;
       position: relative;
       z-index: 1;
     }
 
-    /* 📱 TABLETTE */
+    /* TABLETTE */
     @media (max-width: 700px) {
+      h1 {
+        font-size: 60px;
+        margin-top: 160px;
+      }
 
-      /* cocotte en RELATIVE + ajustements */
-      .cocotte {
-        position: relative;
+      .torchon {
         width: 220px;
-        margin-top: 40px;
-        right: -30px;      /* un peu plus à droite */
+        top: 40px;
+        left: 5px;
+      }
+
+      .cocotte {
+        width: 220px;
+        bottom: 30px;   /* plus haut que PC */
+        right: 20px;    /* un peu plus à droite */
+        max-width: none;
       }
 
       .select-recette {
-        margin-top: 60px; /* écarte du bouton */
+        margin-top: 60px;
       }
 
       footer {
-        margin-top: 40px; /* footer visible */
+        font-size: 16px;
+        margin-top: 40px;
       }
     }
 
-    /* 📱 TÉLÉPHONE */
+    /* MOBILE */
     @media (max-width: 480px) {
+      h1 {
+        font-size: 46px;
+        margin-top: 150px;
+      }
+
+      .torchon {
+        width: 160px;
+        top: 30px;
+        left: 0;
+      }
 
       .cocotte {
-        position: relative;
-        width: 180px;
-        margin-top: 55px;   /* plus bas */
-        right: -40px;       /* plus à droite */
+        width: 160px;
+        bottom: 20px;   /* légèrement plus bas */
+        right: 10px;    /* plus à droite */
+        max-width: none;
       }
 
       .select-recette {
-        margin-top: 50px;   /* descendu légèrement */
+        margin-top: 50px;
       }
 
       footer {
-        margin-top: 50px;   /* toujours visible */
+        margin-top: 40px;
       }
     }
   </style>
@@ -146,18 +152,15 @@
 
 <body>
 
-  <img src="torchon.png" alt="torchon décoratif" class="torchon">
+  <img src="torchon.png" class="torchon">
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
 
   <select class="select-recette" onchange="
-      if (this.value.endsWith('.pdf')) {
-          window.open(this.value, '_blank');
-      } else if (this.value) {
-          window.location.href = this.value;
-      }
+    if (this.value.endsWith('.pdf')) window.open(this.value, '_blank');
+    else if (this.value) window.location.href = this.value;
   ">
     <option value="">— Dernières recettes —</option>
     <option value="0-quiche-bleu.pdf">Quiche au bleu 15/11/2025</option>
@@ -165,13 +168,12 @@
     <option value="0-saute-de-veau.pdf">Sauté de veau aux panais 15/11/2025</option>
   </select>
 
-  <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
+  <img src="cocotte.png" class="cocotte">
 
   <footer>— Carnet de recettes de Mamylou —</footer>
 
 </body>
 </html>
-
 
 
 
