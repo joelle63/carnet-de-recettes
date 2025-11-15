@@ -50,7 +50,6 @@
       z-index: 1;
     }
 
-    /* ----------- BOUTON PRINCIPAL ----------- */
     .entrez-goutez {
       display: inline-block;
       background-color: #800000;
@@ -59,8 +58,9 @@
       border-radius: 10px;
       font-weight: bold;
       font-size: 24px;
-      text-decoration: none;
       margin-top: 10px;
+      text-decoration: none;
+      cursor: pointer;
       position: relative;
       z-index: 2;
       transition: background-color 0.3s ease, transform 0.2s ease;
@@ -101,8 +101,9 @@
       z-index: 1;
     }
 
-    /* ----------- RESPONSIVE TABLETTE ----------- */
+    /* ----------- TABLETTE ----------- */
     @media (max-width: 700px) {
+
       h1 {
         font-size: 60px;
         margin-top: 180px;
@@ -112,41 +113,30 @@
         width: 220px;
         top: 40px;
         left: 10px;
-        opacity: 0.8;
       }
 
       .entrez-goutez {
         font-size: 20px;
-        padding: 12px 22px;
       }
 
+      /* 🔹 rapproche du bas */
       .select-recette {
-        font-size: 18px;
-        padding: 8px 10px;
-
-        /* léger ajustement tablette */
-        margin-top: 50px;
+        transform: translateY(10px);
       }
 
       .cocotte {
-        position: relative;
-        bottom: auto;
-        right: auto;
         width: 200px;
-
-        /* léger ajustement tablette */
-        margin-top: 80px;
+        transform: translateY(60px); /* plus bas */
       }
 
       footer {
-        bottom: 0;
-        font-size: 16px;
-        margin-top: 100px;
+        margin-top: 70px;
       }
     }
 
-    /* ----------- RESPONSIVE MOBILE ----------- */
+    /* ----------- MOBILE ----------- */
     @media (max-width: 480px) {
+
       h1 {
         font-size: 46px;
         margin-top: 160px;
@@ -162,22 +152,19 @@
         font-size: 18px;
       }
 
+      /* 🔹 rapproche la liste de la cocotte */
       .select-recette {
         font-size: 16px;
-
-        /* 🔥 plus d’espace sous le bouton */
-        margin-top: 70px;
+        transform: translateY(20px);
       }
 
       .cocotte {
         width: 160px;
-
-        /* 🔥 cocotte descend beaucoup plus sur mobile */
-        margin-top: 120px;
+        transform: translateY(75px); /* légèrement plus bas */
       }
 
       footer {
-        margin-top: 80px;
+        margin-top: 60px;
       }
     }
   </style>
@@ -212,4 +199,3 @@
 
 </body>
 </html>
-
