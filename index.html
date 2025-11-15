@@ -44,7 +44,7 @@
       font-size: 96px;
       color: #800000;
       text-align: center;
-      margin-top: 120px;
+      margin-top: 100px;
       line-height: 1.1;
       position: relative;
       z-index: 1;
@@ -52,37 +52,43 @@
 
     .entrez-goutez {
       display: inline-block;
-      background-color: #800000;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 10px;
+      font-family: 'Montserrat', sans-serif;
       font-weight: bold;
+      color: #3B3B3B;
       font-size: 24px;
-      margin-top: 10px;
+      margin-top: -10px;
       text-decoration: none;
-      cursor: pointer;
       position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
       z-index: 2;
     }
 
+    .entrez-goutez:hover {
+      color: #A63A00;
+    }
+
     .select-recette {
-      margin-top: 80px;
+      margin-top: 100px;
       font-size: 20px;
       padding: 10px 14px;
       border-radius: 8px;
       border: 2px solid #800000;
       background-color: #FFF;
       color: #582900;
+      font-family: 'Montserrat', sans-serif';
+      cursor: pointer;
       z-index: 2;
     }
 
     footer {
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000;
       font-size: 20px;
       margin-top: auto;
-      padding-bottom: 30px;
+      padding-bottom: 40px;
       position: relative;
       z-index: 1;
     }
@@ -91,29 +97,29 @@
     @media (max-width: 700px) {
       h1 {
         font-size: 60px;
-        margin-top: 160px;
+        margin-top: 180px;
       }
-
       .torchon {
         width: 220px;
         top: 40px;
-        left: 5px;
+        left: 10px;
       }
-
-      .cocotte {
-        width: 220px;
-        bottom: 30px;   /* plus haut que PC */
-        right: 20px;    /* un peu plus à droite */
-        max-width: none;
+      .entrez-goutez {
+        font-size: 20px;
       }
-
       .select-recette {
+        font-size: 18px;
+        margin-top: 70px;
+      }
+      .cocotte {
+        position: relative;
+        width: 200px;
+        bottom: auto;
+        right: auto;
         margin-top: 60px;
       }
-
       footer {
-        font-size: 16px;
-        margin-top: 40px;
+        margin-top: 100px;
       }
     }
 
@@ -121,28 +127,37 @@
     @media (max-width: 480px) {
       h1 {
         font-size: 46px;
-        margin-top: 150px;
+        margin-top: 160px;
       }
 
       .torchon {
-        width: 160px;
+        width: 180px;
         top: 30px;
         left: 0;
       }
 
-      .cocotte {
-        width: 160px;
-        bottom: 20px;   /* légèrement plus bas */
-        right: 10px;    /* plus à droite */
-        max-width: none;
+      .entrez-goutez {
+        font-size: 18px;
       }
 
       .select-recette {
-        margin-top: 50px;
+        font-size: 16px;
+        margin-top: 40px; /* ↓ légère descente */
       }
 
+      /* ✅ COCOTTE REMONTÉE ET PLUS À DROITE */
+      .cocotte {
+        width: 160px;
+        position: absolute;
+        bottom: 80px;   /* ← REMONTÉE */
+        right: 10px;    /* ← PLUS À DROITE */
+        z-index: 0;
+      }
+
+      /* ✅ FOOTER TOUJOURS VISIBLE */
       footer {
-        margin-top: 40px;
+        margin-top: auto;
+        padding-bottom: 10px; /* rapproche du bas */
       }
     }
   </style>
@@ -152,15 +167,18 @@
 
 <body>
 
-  <img src="torchon.png" class="torchon">
+  <img src="torchon.png" alt="torchon décoratif" class="torchon">
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
 
   <select class="select-recette" onchange="
-    if (this.value.endsWith('.pdf')) window.open(this.value, '_blank');
-    else if (this.value) window.location.href = this.value;
+    if (this.value.endsWith('.pdf')) {
+      window.open(this.value, '_blank');
+    } else if (this.value) {
+      window.location.href = this.value;
+    }
   ">
     <option value="">— Dernières recettes —</option>
     <option value="0-quiche-bleu.pdf">Quiche au bleu 15/11/2025</option>
@@ -168,12 +186,13 @@
     <option value="0-saute-de-veau.pdf">Sauté de veau aux panais 15/11/2025</option>
   </select>
 
-  <img src="cocotte.png" class="cocotte">
+  <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
 
   <footer>— Carnet de recettes de Mamylou —</footer>
 
 </body>
 </html>
+
 
 
 
