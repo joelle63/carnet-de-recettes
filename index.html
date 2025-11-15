@@ -29,10 +29,9 @@
       z-index: 0;
     }
 
-    /* 🔹 cocotte remontée */
     .cocotte {
       position: absolute;
-      bottom: 130px; /* remonte la cocotte */
+      bottom: 60px;
       right: 50px;
       width: 350px;
       opacity: 0.9;
@@ -51,6 +50,7 @@
       z-index: 1;
     }
 
+    /* ⭐ BOUTON "ENTREZ ET GOÛTEZ" — ajouté ⭐ */
     .entrez-goutez {
       display: inline-block;
       background-color: #800000;
@@ -59,7 +59,9 @@
       border-radius: 10px;
       font-weight: bold;
       font-size: 24px;
-      margin-top: 10px;
+
+      margin-top: -10px;  /* valeur que tu avais */
+
       text-decoration: none;
       cursor: pointer;
       position: relative;
@@ -73,10 +75,8 @@
     }
 
     /* ----------- MENU DÉROULANT ----------- */
-
-    /* 🔹 liste descendue */
     .select-recette {
-      margin-top: 140px; /* augmente la distance */
+      margin-top: 100px;  /* valeur que tu avais */
       font-size: 20px;
       padding: 10px 14px;
       border-radius: 8px;
@@ -88,22 +88,23 @@
       z-index: 2;
     }
 
+    .select-recette:hover {
+      border-color: #A63A00;
+    }
+
     footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       color: #800000;
       font-size: 20px;
-      padding: 15px 0;
-      background-color: #FFF8DC;
-      z-index: 3;
+      margin-top: auto;
+      padding-bottom: 40px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ----------- TABLETTE ----------- */
+    /* 📱 TABLETTE */
     @media (max-width: 700px) {
       h1 {
         font-size: 60px;
@@ -114,25 +115,39 @@
         width: 220px;
         top: 40px;
         left: 10px;
+        opacity: 0.8;
       }
 
       .entrez-goutez {
         font-size: 20px;
+        margin-top: -5px;
       }
 
-      /* 🔹 liste descendue */
       .select-recette {
-        margin-top: 120px;
+        font-size: 18px;
+        padding: 8px 10px;
+        margin-top: 70px;
       }
 
-      /* 🔹 cocotte remontée */
       .cocotte {
+        position: relative;
+        bottom: auto;
+        right: auto;
         width: 200px;
-        bottom: 120px;
+        margin-top: 60px;
+        opacity: 0.9;
+        z-index: 1;
+      }
+
+      footer {
+        position: relative;
+        bottom: 0;
+        font-size: 16px;
+        margin-top: 100px;
       }
     }
 
-    /* ----------- MOBILE ----------- */
+    /* 📱 TÉLÉPHONE */
     @media (max-width: 480px) {
       h1 {
         font-size: 46px;
@@ -143,22 +158,26 @@
         width: 180px;
         top: 30px;
         left: 0;
+        opacity: 0.75;
       }
 
       .entrez-goutez {
         font-size: 18px;
+        margin-top: -5px;
       }
 
-      /* 🔹 liste descendue */
       .select-recette {
         font-size: 16px;
-        margin-top: 100px;
+        margin-top: 60px;
       }
 
-      /* 🔹 cocotte remontée */
       .cocotte {
         width: 160px;
-        bottom: 110px;
+        margin-top: 60px;
+      }
+
+      footer {
+        margin-top: 60px;
       }
     }
   </style>
@@ -172,6 +191,7 @@
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
+  <!-- ⭐ LE BOUTON REPLACÉ, RIEN D’AUTRE ⭐ -->
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
 
   <select class="select-recette" onchange="
@@ -193,4 +213,3 @@
 
 </body>
 </html>
-
