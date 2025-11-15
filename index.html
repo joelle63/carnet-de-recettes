@@ -56,7 +56,10 @@
       font-weight: bold;
       color: #3B3B3B;
       font-size: 24px;
-      margin-top: 25px;
+
+      /* 🔹 Remonté */
+      margin-top: 10px;
+
       text-decoration: none;
       position: relative;
       cursor: pointer;
@@ -86,7 +89,10 @@
 
     /* ----------- MENU DÉROULANT ----------- */
     .select-recette {
-      margin-top: 20px;
+
+      /* 🔹 Descendu */
+      margin-top: 50px;
+
       font-size: 20px;
       padding: 10px 14px;
       border-radius: 8px;
@@ -129,11 +135,12 @@
       }
       .entrez-goutez {
         font-size: 20px;
-        margin-top: 40px;
+        margin-top: 25px;
       }
       .select-recette {
         font-size: 18px;
         padding: 8px 10px;
+        margin-top: 35px;
       }
       .cocotte {
         position: relative;
@@ -168,6 +175,7 @@
       }
       .select-recette {
         font-size: 16px;
+        margin-top: 30px;
       }
       .cocotte {
         width: 160px;
@@ -188,10 +196,8 @@
 
   <h1>Ma cuisine<br>du quotidien</h1>
 
-  <!-- 🔹 LE LIEN D’ABORD -->
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
 
-  <!-- 🔹 ENSUITE LE MENU DÉROULANT -->
   <select class="select-recette" onchange="
       if (this.value.endsWith('.pdf')) {
           window.open(this.value, '_blank');
@@ -211,4 +217,3 @@
 
 </body>
 </html>
-
