@@ -29,6 +29,7 @@
       z-index: 0;
     }
 
+    /* PC = absolute */
     .cocotte {
       position: absolute;
       bottom: 60px;
@@ -100,79 +101,42 @@
       z-index: 1;
     }
 
-    /* 🌙 TABLETTE */
+    /* 📱 TABLETTE */
     @media (max-width: 700px) {
-      h1 {
-        font-size: 60px;
-        margin-top: 180px;
-      }
 
-      .torchon {
+      /* cocotte en RELATIVE + ajustements */
+      .cocotte {
+        position: relative;
         width: 220px;
-        top: 40px;
-        left: 10px;
-      }
-
-      .entrez-goutez {
-        font-size: 20px;
+        margin-top: 40px;
+        right: -30px;      /* un peu plus à droite */
       }
 
       .select-recette {
-        font-size: 18px;
-        padding: 8px 10px;
-        margin-top: 70px;
-      }
-
-      .cocotte {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        width: 200px;
-        margin-top: 60px;
-        z-index: 1;
+        margin-top: 60px; /* écarte du bouton */
       }
 
       footer {
-        margin-top: 100px;
-        font-size: 16px;
+        margin-top: 40px; /* footer visible */
       }
     }
 
-    /* 📱 MOBILE */
+    /* 📱 TÉLÉPHONE */
     @media (max-width: 480px) {
 
-      h1 {
-        font-size: 46px;
-        margin-top: 160px;
-      }
-
-      .torchon {
+      .cocotte {
+        position: relative;
         width: 180px;
-        top: 30px;
-        left: 0;
-      }
-
-      .entrez-goutez {
-        font-size: 18px;
+        margin-top: 55px;   /* plus bas */
+        right: -40px;       /* plus à droite */
       }
 
       .select-recette {
-        font-size: 16px;
-        margin-top: 60px;
-      }
-
-      /* ⭐ Cocotte mobile ajustée exactement comme demandé ⭐ */
-      .cocotte {
-        position: absolute;
-        bottom: 140px;  /* plus bas */
-        right: 30px;   /* plus à droite */
-        width: 160px;
-        opacity: 0.9;
+        margin-top: 50px;   /* descendu légèrement */
       }
 
       footer {
-        margin-top: auto;
-        font-size: 16px;
+        margin-top: 50px;   /* toujours visible */
       }
     }
   </style>
@@ -207,6 +171,7 @@
 
 </body>
 </html>
+
 
 
 
