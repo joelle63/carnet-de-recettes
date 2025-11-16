@@ -32,7 +32,7 @@
     /* ⭐ PC : cocotte plus basse ⭐ */
     .cocotte {
       position: absolute;
-      bottom: 20px;     /* ← au lieu de 60px */
+      bottom: 20px;
       right: 50px;
       width: 350px;
       opacity: 0.9;
@@ -141,13 +141,21 @@
       }
     }
 
-    /* 📱 TÉLÉPHONE */
+    /* 📱 TÉLÉPHONE – VERSION CORRIGÉE (footer visible sans scroll) */
     @media (max-width: 480px) {
-      h1 { font-size: 46px; margin-top: 160px; }
+
+      body {
+        min-height: 100vh;
+      }
+
+      h1 { 
+        font-size: 46px; 
+        margin-top: 120px; /* ↓ un peu remonté pour compacter */
+      }
 
       .torchon {
         width: 180px;
-        top: 30px;
+        top: 20px;    /* ↓ légèrement */
         left: 0;
         opacity: 0.75;
       }
@@ -159,18 +167,19 @@
 
       .select-recette {
         font-size: 16px;
-        margin-top: 60px;
+        margin-top: 40px; /* ↓ moins haut */
       }
 
-      /* ⭐ MOBILE : cocotte plus basse + plus à droite ⭐ */
+      /* ⭐ MOBILE : cocotte ajustée pour que tout tienne sans scroll */
       .cocotte {
-        width: 160px;
-        margin-top: 90px;        /* ↓ descendue */
-        transform: translateX(20px); /* → poussée à droite */
+        width: 150px;
+        margin-top: 40px;      /* ↑ remontée pour faire tenir le tout */
+        transform: translateX(30px); /* → un peu plus à droite */
       }
 
       footer {
-        margin-top: 60px;
+        margin-top: 30px;       /* ↑ remonte sans chevaucher */
+        font-size: 16px;
       }
     }
   </style>
