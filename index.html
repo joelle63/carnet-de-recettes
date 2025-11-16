@@ -30,13 +30,14 @@
     }
 
     /* ⭐ PC : cocotte plus basse ⭐ */
-   .cocotte {
-  position: absolute;    /* ← La clé ! */
-  bottom: 80px;          /* ← Ajuste la hauteur (descendre = baisse la valeur) */
-  right: 20px;           /* ← Plus à droite */
-  width: 160px;
-  z-index: 0;
-}
+    .cocotte {
+      position: absolute;
+      bottom: 80px;
+      right: 20px;
+      width: 160px;
+      z-index: 0;
+    }
+
     h1 {
       font-family: 'Pinyon Script', cursive;
       font-size: 96px;
@@ -138,21 +139,23 @@
       }
     }
 
-    /* 📱 TÉLÉPHONE – VERSION CORRIGÉE (footer visible sans scroll) */
+    /* 📱 TÉLÉPHONE – VERSION STABLE AVEC FOOTER TOUJOURS SOUS LA COCOTTE */
     @media (max-width: 480px) {
 
+      /* ⭐ Ajout essentiel : garantit l'espace pour le footer */
       body {
         min-height: 100vh;
+        padding-bottom: 200px; /* ← espace virtuel sous la cocotte */
       }
 
       h1 { 
         font-size: 46px; 
-        margin-top: 120px; /* ↓ un peu remonté pour compacter */
+        margin-top: 120px;
       }
 
       .torchon {
         width: 180px;
-        top: 20px;    /* ↓ légèrement */
+        top: 20px;
         left: 0;
         opacity: 0.75;
       }
@@ -164,20 +167,20 @@
 
       .select-recette {
         font-size: 16px;
-        margin-top: 60px; /* ↓ moins haut */
+        margin-top: 60px;
       }
 
-      /* ⭐ MOBILE : cocotte ajustée pour que tout tienne sans scroll */
-    .cocotte {
-  position: absolute;    /* ← La clé ! */
-  bottom: 80px;          /* ← Ajuste la hauteur (descendre = baisse la valeur) */
-  right: 20px;           /* ← Plus à droite */
-  width: 160px;
-  z-index: 0;
-}
+      /* ⭐ Cocotte EXACTEMENT à la même place */
+      .cocotte {
+        position: absolute;
+        bottom: 80px;
+        right: 20px;
+        width: 160px;
+        z-index: 0;
+      }
 
       footer {
-        margin-top: 100px;       /* ↑ remonte sans chevaucher */
+        margin-top: 60px;
         font-size: 16px;
       }
     }
@@ -213,10 +216,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
