@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ma cuisine du quotidien</title>
 
-
   <style>
     body {
       margin: 0;
@@ -20,7 +19,6 @@
       overflow-x: hidden;
     }
 
-
     .torchon {
       position: absolute;
       top: 70px;
@@ -31,7 +29,6 @@
       z-index: 0;
     }
 
-
     .cocotte {
       position: absolute;
       bottom: 60px;
@@ -41,7 +38,6 @@
       max-width: 35vw;
       z-index: 0;
     }
-
 
     h1 {
       font-family: 'Pinyon Script', cursive;
@@ -54,58 +50,30 @@
       z-index: 1;
     }
 
-
+    /* ⭐ VERSION BOUTON */
     .entrez-goutez {
       display: inline-block;
-      font-family: 'Montserrat', sans-serif;
+      background-color: #800000;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
       font-weight: bold;
-      color: #3B3B3B;
       font-size: 24px;
-
-
-      /* Remonté (PC) */
       margin-top: -10px;
-
-
       text-decoration: none;
-      position: relative;
       cursor: pointer;
-      transition: color 0.3s ease;
+      position: relative;
       z-index: 2;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
-
-    .entrez-goutez::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background-color: #3B3B3B;
-      transition: width 0.3s ease;
-    }
-
 
     .entrez-goutez:hover {
-      color: #A63A00;
-    }
-
-
-    .entrez-goutez:hover::after {
-      width: 100%;
       background-color: #A63A00;
+      transform: scale(1.03);
     }
 
-
-    /* ----------- MENU DÉROULANT ----------- */
     .select-recette {
-
-
-      /* Descendu (PC) */
       margin-top: 100px;
-
-
       font-size: 20px;
       padding: 10px 14px;
       border-radius: 8px;
@@ -117,11 +85,9 @@
       z-index: 2;
     }
 
-
     .select-recette:hover {
       border-color: #A63A00;
     }
-
 
     footer {
       text-align: center;
@@ -135,14 +101,9 @@
       z-index: 1;
     }
 
-
     /* 📱 TABLETTE */
     @media (max-width: 700px) {
-      h1 {
-        font-size: 60px;
-        margin-top: 180px;
-      }
-
+      h1 { font-size: 60px; margin-top: 180px; }
 
       .torchon {
         width: 220px;
@@ -151,19 +112,16 @@
         opacity: 0.8;
       }
 
-
       .entrez-goutez {
         font-size: 20px;
-        margin-top: -5px;   /* Remonté tablette */
+        margin-top: -5px;
       }
-
 
       .select-recette {
         font-size: 18px;
         padding: 8px 10px;
-        margin-top: 70px;   /* Descendu tablette */
+        margin-top: 70px;
       }
-
 
       .cocotte {
         position: relative;
@@ -175,7 +133,6 @@
         z-index: 1;
       }
 
-
       footer {
         position: relative;
         bottom: 0;
@@ -184,14 +141,13 @@
       }
     }
 
-
     /* 📱 TÉLÉPHONE */
     @media (max-width: 480px) {
+
       h1 {
         font-size: 46px;
         margin-top: 160px;
       }
-
 
       .torchon {
         width: 180px;
@@ -200,47 +156,44 @@
         opacity: 0.75;
       }
 
-
       .entrez-goutez {
         font-size: 18px;
-        margin-top: -5px;   /* Remonté téléphone */
+        margin-top: -5px;
       }
-
 
       .select-recette {
         font-size: 16px;
-        margin-top: 60px;   /* Descendu téléphone */
+        margin-top: 60px;
       }
 
-
+      /* ⭐ COCOTTE EXACTEMENT COMME TU LA VEUX, SANS ABSOLUTE */
       .cocotte {
+        position: relative;
         width: 160px;
-        margin-top: 60px;
+        margin-top: 110px;         /* ↓ tu peux ajuster la descente ici */
+        transform: translateX(28px); /* → tu peux ajuster la droite ici */
+        z-index: 1;
       }
 
-
+      /* ⭐ FOOTER SOUS LA COCOTTE — SANS SCROLL */
       footer {
-        margin-top: 60px;
+        margin-top: 40px;   /* ↑ ajuste si besoin (20 / 60 / 80...) */
+        font-size: 16px;
       }
     }
-  </style>
 
+  </style>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-
 
   <img src="torchon.png" alt="torchon décoratif" class="torchon">
 
-
   <h1>Ma cuisine<br>du quotidien</h1>
 
-
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
-
 
   <select class="select-recette" onchange="
       if (this.value.endsWith('.pdf')) {
@@ -255,12 +208,9 @@
     <option value="0-saute-de-veau.pdf">Sauté de veau aux panais 15/11/2025</option>
   </select>
 
-
   <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
-
 
   <footer>— Carnet de recettes de Mamylou —</footer>
 
-
-
-
+</body>
+</html>
