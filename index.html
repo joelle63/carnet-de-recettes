@@ -50,7 +50,6 @@
       z-index: 1;
     }
 
-    /* ⭐ VERSION BOUTON */
     .entrez-goutez {
       display: inline-block;
       background-color: #800000;
@@ -141,18 +140,17 @@
       }
     }
 
-    /* 📱 TÉLÉPHONE */
+    /* 📱 TÉLÉPHONE (iPhone 11 optimisé) */
     @media (max-width: 480px) {
 
       h1 {
         font-size: 46px;
-        margin-top: 160px;
+        margin-top: 100px;   /* ↓ compacté */
       }
 
       .torchon {
         width: 180px;
-        top: 30px;
-        left: 0;
+        top: 20px;
         opacity: 0.75;
       }
 
@@ -163,25 +161,22 @@
 
       .select-recette {
         font-size: 16px;
-        margin-top: 60px;
+        margin-top: 40px;   /* ↓ compacté */
       }
 
-      /* ⭐ COCOTTE EXACTEMENT COMME TU LA VEUX, SANS ABSOLUTE */
       .cocotte {
         position: relative;
         width: 160px;
-        margin-top: 110px;         /* ↓ tu peux ajuster la descente ici */
-        transform: translateX(28px); /* → tu peux ajuster la droite ici */
+        margin-top: 60px;   /* ↓ compacté */
+        transform: translateX(28px);
         z-index: 1;
       }
 
-      /* ⭐ FOOTER SOUS LA COCOTTE — SANS SCROLL */
       footer {
-        margin-top: 40px;   /* ↑ ajuste si besoin (20 / 60 / 80...) */
+        margin-top: 20px;   /* ↓ compacté */
         font-size: 16px;
       }
     }
-
   </style>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pinyon+Script&display=swap" rel="stylesheet">
