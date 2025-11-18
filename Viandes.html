@@ -32,6 +32,7 @@
       font-size: 70px;
       color: #800000;
       margin: 0;
+      white-space: nowrap;   /* ⭐ PC = 1 seule ligne */
     }
 
     /* ---- LISTE ---- */
@@ -40,7 +41,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 1px;  /* 🔽 distance légèrement réduite */
+      gap: 1px;
     }
 
     .recette {
@@ -90,7 +91,7 @@
 
       .recettes {
         margin-top: 30px;
-        gap: 8px; /* 🔼 légèrement ajusté aussi en mobile */
+        gap: 8px;
         align-items: center;
       }
 
@@ -110,6 +111,7 @@
       }
     }
 
+    /* 📱 ---- TÉLÉPHONE ---- */
     @media (max-width: 480px) {
       .titre-principal {
         margin-top: 50px;
@@ -117,6 +119,10 @@
 
       .titre-principal h1 {
         font-size: 38px;
+
+        /* ⭐⭐ NOUVEAUTÉ : forcer le passage sur 2 lignes ⭐⭐ */
+        white-space: normal;
+        line-height: 1.05;
       }
 
       .recettes {
@@ -138,18 +144,16 @@
 
 <body>
   <div class="titre-principal">
-    <h1>Viandes et \n accompagnements</h1>
+    <h1>Viandes et accompagnements</h1>
   </div>
 
   <div class="recettes">
 
-    <!-- 🔸 LIGNE EXISTANTE -->
     <div class="recette">
       <img src="2-Poulet.png" alt="Icône poulet">
       <a href="0-Poulet.pdf" target="_blank">Poulet au curry, patates douces et épinards</a>
     </div>
 
-    <!-- 🔸 NOUVELLE LIGNE : SAUTÉ DE VEAU AUX PANAIS -->
     <div class="recette">
       <img src="2-Panais.png" alt="Icône panais">
       <a href="0-saute-de-veau.pdf" target="_blank">Sauté de veau aux panais, carottes pomme et miel</a>
@@ -160,5 +164,6 @@
   <footer>Octobre 2025 — Carnet de recettes de Mamylou</footer>
 </body>
 </html>
+
 
 
