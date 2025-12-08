@@ -190,17 +190,15 @@
 
   <a href="Matiere-1.html" class="entrez-goutez">Entrez et goûtez</a>
 
-  <select class="select-recette" onchange="
-      if (this.value.endsWith('.pdf')) {
-          window.open(this.value, '_blank');
-      } else if (this.value) {
-          window.location.href = this.value;
-      }
+ <select class="select-recette" onchange="
+    if (this.value) {
+        window.location.href = this.value;
+    }
   ">
     <option value="">— Dernières recettes —</option>
     <option value="0-lentilles.pdf">Lentilles à l'espagnole 05/12/2025</option>
     <option value="0-Chili.pdf">Chili con carne 30/11/2025</option>
-    <option value="0-veloute-champignons.pdf">Velouté de champignons 24/11/2025</option> 
+    <option value="0-veloute-champignons.pdf">Velouté de champignons 24/11/2025</option>    
   </select>
 
   <img src="cocotte.png" alt="cocotte décorative" class="cocotte">
@@ -209,5 +207,3 @@
 
 </body>
 </html>
-
-
